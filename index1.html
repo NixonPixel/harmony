@@ -21,6 +21,7 @@
 		</script>
 		<link rel="stylesheet" href="./styles/main.css">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic" rel="stylesheet">
+		
 	</head>
 	<body>
 		<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -214,269 +215,174 @@
 		        </div>
 		    </div>
 		</header>
-		<div class="main">
-            <div class="container">
-			<section class="doctors">
-			    <h1 class="doctors__title">
-			        Врачи
-			    </h1>
-			    <div class="doctors__filter">
-			        <div class="doctors__filter-item">
-			            <select class="doctors__filter-select filter-select" name="doctors-category" id="doctorsCategory">
-			                <option value="all">Все Врачи</option>
-			                <option value="adults">Взрослые</option>
-			                <option value="childrens">Детские</option>
-			            </select>
-			        </div>
-			        <div class="doctors__filter-item">
-			            <select class="doctors__filter-select filter-select">
-			                <option>Выбрать специальность</option>
-			                <option>Акушер-гинеколог</option>
-			                <option>Аллерголог-иммунолог</option>
-			                <option>Андролог</option>
-			                <option>Врач общей практики</option>
-			                <option>Врач ультразвуковой диагностики (УЗИ)</option>   
-			                <option>Врач функциональной диагностики</option>  
-			                <option>Гастроэнтеролог</option>
-			                <option>Дерматовенеролог</option>
-			                <option>Дерматолог</option>
-			                <option>Диетолог</option>
-			                <option>Кардиолог</option>
-			                <option>Колопроктолог</option>
-			                <option>Косметолог</option>
-			                <option>Маммолог</option>
-			                <option>Мануальный терапевт</option>
-			                <option>Массажист</option>
-			                <option>Невролог</option>
-			                <option>Онколог</option>
-			                <option>Отоларинголог (ЛОР)</option>
-			                <option>Офтальмолог</option>
-			                <option>Педиатр</option>
-			            </select>
-			        </div>
-			        <div class="doctors__filter-item doctors__filter-search filter__search">
-			            <input type="search" placeholder="Введите ФИО врача">
-			            <span class="search__icon">
-			                <svg class="icon icon-search-icon"><use xlink:href="#icon-search-icon"></use></svg>
-			            </span>
-			        </div>
-			    </div>
-			    <ul class="doctors__list">
-			        <li class="doctors__list-item">
-			            <a href="/about-doctor.html">
-			                <div class="doctors__list-item-img">
-			                    <img src="img/all-doctors-img.jpg" alt="">
-			                </div>
-			                <h2 class="doctors__list-item-name">Десятерик Марина Григорьевна</h2>
-			                <p class="doctors__list-item-position">Гинеколог-эндокринолог, детский гинеколог</p>
-			                <p class="doctors__list-item-experience">
-			                    Стаж: 15 лет
-			                </p>
-			            </a>
-			        </li>
-			        <li class="doctors__list-item">
-			            <a href="/about-doctor.html">
-			                <div class="doctors__list-item-img">
-			                    <img src="img/all-doctors-img.jpg" alt="">
-			                </div>
-			                <h2 class="doctors__list-item-name">Десятерик Марина Григорьевна</h2>
-			                <p class="doctors__list-item-position">Гинеколог-эндокринолог, детский гинеколог</p>
-			                <p class="doctors__list-item-experience">
-			                    Стаж: 15 лет
-			                </p>
-			            </a>
-			        </li>
-			        <li class="doctors__list-item">
-			            <a href="/about-doctor.html">
-			                <div class="doctors__list-item-img">
-			                    <img src="img/all-doctors-img.jpg" alt="">
-			                </div>
-			                <h2 class="doctors__list-item-name">Десятерик Марина Григорьевна</h2>
-			                <p class="doctors__list-item-position">Гинеколог-эндокринолог, детский гинеколог</p>
-			                <p class="doctors__list-item-experience">
-			                    Стаж: 15 лет
-			                </p>
-			            </a>
-			        </li>
-			        <li class="doctors__list-item">
-			            <a href="/about-doctor.html">
-			                <div class="doctors__list-item-img">
-			                    <img src="img/all-doctors-img.jpg" alt="">
-			                </div>
-			                <h2 class="doctors__list-item-name">Десятерик Марина Григорьевна</h2>
-			                <p class="doctors__list-item-position">Гинеколог-эндокринолог, детский гинеколог</p>
-			                <p class="doctors__list-item-experience">
-			                    Стаж: 15 лет
-			                </p>
-			            </a>
-			        </li>
-			        <li class="doctors__list-item">
-			            <a href="/about-doctor.html">
-			                <div class="doctors__list-item-img">
-			                    <img src="img/all-doctors-img.jpg" alt="">
-			                </div>
-			                <h2 class="doctors__list-item-name">Десятерик Марина Григорьевна</h2>
-			                <p class="doctors__list-item-position">Гинеколог-эндокринолог, детский гинеколог</p>
-			                <p class="doctors__list-item-experience">
-			                    Стаж: 15 лет
-			                </p>
-			            </a>
-			        </li>
-			        <li class="doctors__list-item">
-			            <a href="/about-doctor.html">
-			                <div class="doctors__list-item-img">
-			                    <img src="img/all-doctors-img.jpg" alt="">
-			                </div>
-			                <h2 class="doctors__list-item-name">Десятерик Марина Григорьевна</h2>
-			                <p class="doctors__list-item-position">Гинеколог-эндокринолог, детский гинеколог</p>
-			                <p class="doctors__list-item-experience">
-			                    Стаж: 15 лет
-			                </p>
-			            </a>
-			        </li>
-			        <li class="doctors__list-item">
-			            <a href="/about-doctor.html">
-			                <div class="doctors__list-item-img">
-			                    <img src="img/all-doctors-img.jpg" alt="">
-			                </div>
-			                <h2 class="doctors__list-item-name">Десятерик Марина Григорьевна</h2>
-			                <p class="doctors__list-item-position">Гинеколог-эндокринолог, детский гинеколог</p>
-			                <p class="doctors__list-item-experience">
-			                    Стаж: 15 лет
-			                </p>
-			            </a>
-			        </li>
-			        <li class="doctors__list-item">
-			            <a href="/about-doctor.html">
-			                <div class="doctors__list-item-img">
-			                    <img src="img/all-doctors-img.jpg" alt="">
-			                </div>
-			                <h2 class="doctors__list-item-name">Десятерик Марина Григорьевна</h2>
-			                <p class="doctors__list-item-position">Гинеколог-эндокринолог, детский гинеколог</p>
-			                <p class="doctors__list-item-experience">
-			                    Стаж: 15 лет
-			                </p>
-			            </a>
-			        </li>
-			        <li class="doctors__list-item">
-			            <a href="/about-doctor.html">
-			                <div class="doctors__list-item-img">
-			                    <img src="img/all-doctors-img.jpg" alt="">
-			                </div>
-			                <h2 class="doctors__list-item-name">Десятерик Марина Григорьевна</h2>
-			                <p class="doctors__list-item-position">Гинеколог-эндокринолог, детский гинеколог</p>
-			                <p class="doctors__list-item-experience">
-			                    Стаж: 15 лет
-			                </p>
-			            </a>
-			        </li>
-			        <li class="doctors__list-item">
-			            <a href="/about-doctor.html">
-			                <div class="doctors__list-item-img">
-			                    <img src="img/all-doctors-img.jpg" alt="">
-			                </div>
-			                <h2 class="doctors__list-item-name">Десятерик Марина Григорьевна</h2>
-			                <p class="doctors__list-item-position">Гинеколог-эндокринолог, детский гинеколог</p>
-			                <p class="doctors__list-item-experience">
-			                    Стаж: 15 лет
-			                </p>
-			            </a>
-			        </li>
-			        <li class="doctors__list-item">
-			            <a href="/about-doctor.html">
-			                <div class="doctors__list-item-img">
-			                    <img src="img/all-doctors-img.jpg" alt="">
-			                </div>
-			                <h2 class="doctors__list-item-name">Десятерик Марина Григорьевна</h2>
-			                <p class="doctors__list-item-position">Гинеколог-эндокринолог, детский гинеколог</p>
-			                <p class="doctors__list-item-experience">
-			                    Стаж: 15 лет
-			                </p>
-			            </a>
-			        </li>
-			        <li class="doctors__list-item">
-			            <a href="/about-doctor.html">
-			                <div class="doctors__list-item-img">
-			                    <img src="img/all-doctors-img.jpg" alt="">
-			                </div>
-			                <h2 class="doctors__list-item-name">Десятерик Марина Григорьевна</h2>
-			                <p class="doctors__list-item-position">Гинеколог-эндокринолог, детский гинеколог</p>
-			                <p class="doctors__list-item-experience">
-			                    Стаж: 15 лет
-			                </p>
-			            </a>
-			        </li>
-			        <li class="doctors__list-item">
-			            <a href="/about-doctor.html">
-			                <div class="doctors__list-item-img">
-			                    <img src="img/all-doctors-img.jpg" alt="">
-			                </div>
-			                <h2 class="doctors__list-item-name">Десятерик Марина Григорьевна</h2>
-			                <p class="doctors__list-item-position">Гинеколог-эндокринолог, детский гинеколог</p>
-			                <p class="doctors__list-item-experience">
-			                    Стаж: 15 лет
-			                </p>
-			            </a>
-			        </li>
-			        <li class="doctors__list-item">
-			            <a href="/about-doctor.html">
-			                <div class="doctors__list-item-img">
-			                    <img src="img/all-doctors-img.jpg" alt="">
-			                </div>
-			                <h2 class="doctors__list-item-name">Десятерик Марина Григорьевна</h2>
-			                <p class="doctors__list-item-position">Гинеколог-эндокринолог, детский гинеколог</p>
-			                <p class="doctors__list-item-experience">
-			                    Стаж: 15 лет
-			                </p>
-			            </a>
-			        </li>
-			        <li class="doctors__list-item">
-			            <a href="/about-doctor.html">
-			                <div class="doctors__list-item-img">
-			                    <img src="img/all-doctors-img.jpg" alt="">
-			                </div>
-			                <h2 class="doctors__list-item-name">Десятерик Марина Григорьевна</h2>
-			                <p class="doctors__list-item-position">Гинеколог-эндокринолог, детский гинеколог</p>
-			                <p class="doctors__list-item-experience">
-			                    Стаж: 15 лет
-			                </p>
-			            </a>
-			        </li>
-			    </ul>
-			    
-			</section>
-			<section id="registration-doctor-appointment" class="registration-doctor-appointment">
-			    <h2 class="registration-doctor-appointment__title h2">
-			        Запись на приём
-			    </h2>
-			    <form action="" method="POST">
-			        <div class="registration-doctor-appointment__current-city">
-			            <p style="font-weight: 700">Ваш город:</p>
-			            <p class="registration-doctor-appointment__city-name"></p>
-			            <select id="registration-doctor__select-office" name="registration-doctor__select-office">
-			                <option value="ст.Ессентукская">ст.Ессентукская</option>
-			                <option value="ст.Ессентукская2">ст.Ессентукская2</option>
-			                <option value="ст.Ессентукская3">ст.Ессентукская2</option>
-			            </select>
-			        </div>
-			        <div class="registration-doctor-appointment__form-group">
-			            <input type="text" placeholder="Имя" name="name">
-			            <input type="text" name="tel">
-			            <input class="btn primary-btn" type="submit" value="Записаться на приём">
-			        </div>
-			        <p class="registration-doctor-appointment__agree">
-			            Нажимая на кнопку, вы даёте согласие <a href="#">на обработку персональных данных.</a>
-			        </p>
-			        <div class="registration-doctor-appointment__kaptcha">
-			            <div id="html_element"></div>
-			        </div>
-			    </form>
-			</section>
-            <div class="pulsating-circle">
-                <span class="pulsating-circle__text">Запись на приём</span>
-            </div>
-            </div>
-        </div>
+		<main class="main">
+			<div class="container">
+				<h1 class="page-title">
+					Сеть многопрофильных медицинских центров «Гармония»
+				</h1>
+				<section class="promo-slider">
+				    <ul class="promo-slider__slider-list">
+				        <li class="promo-slider__slider-item">
+				            <div class="promo-slider__slider-item-img-container">
+				                <picture>
+				                    <img class="img-responsive" src="img/index-slider-img1.jpg" srcset="img/index-slider-img1@2x.jpg 2x" alt="">
+				                </picture>
+				                <div class="time-to-end-action">
+				                    <div class="time-to-end-action__text">
+				                        <p>До конца акции осталось</p>
+				                        <p>
+				                            <span>28 дней</span>
+				                            <span>14 часов</span>
+				                            <span>06 минут</span>
+				                        </p>
+				                    </div>
+				                </div>
+				            </div>
+				        </li>
+				        <li class="promo-slider__slider-item">
+				            <div class="promo-slider__slider-item-img-container">
+				                <picture>
+				                    <img class="img-responsive" src="img/index-slider-img1.jpg" srcset="img/index-slider-img1@2x.jpg 2x" alt="">
+				                </picture>
+				                <div class="time-to-end-action">
+				                    <div class="time-to-end-action__text">
+				                        <p>До конца акции осталось</p>
+				                        <p>
+				                            <span>28 дней</span>
+				                            <span>14 часов</span>
+				                            <span>06 минут</span>
+				                        </p>
+				                    </div>
+				                </div>
+				            </div>
+				        </li>
+				    </ul>
+				</section>
+				<section class="services-list">
+				    <div class="services-list__container">
+				        <ul class="services-list__tabs">
+				            <li id="tab-1" class="services-list__tab active">
+				                <span>Для взрослых</span>
+				            </li>
+				            <li id="tab-2" class="services-list__tab">
+				                <span>Для детей</span>
+				            </li>
+				            <li id="tab-3" class="services-list__tab">
+				                <span>Проф.осмотры</span>
+				            </li>
+				            <li id="tab-4" class="services-list__tab">
+				                <span>Диагностика</span>
+				            </li>
+				        </ul>
+				        <div class="services-list__tabs-content">
+				            <ul class="services-list__list active" id='list-1'>
+				                <li class="services-list__list-item"><a href="about-services.html">Терапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Гинеколог</a></li>
+				                <li class="services-list__list-item"><a href="#">Эндокринолог</a></li>
+				                <li class="services-list__list-item"><a href="#">Дерматолог</a></li>
+				                <li class="services-list__list-item"><a href="#">Дерматовенеролог</a></li>
+				                <li class="services-list__list-item"><a href="#">Гирудотерапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Гастроэнтеролог</a></li>
+				                <li class="services-list__list-item"><a href="#">Неверолог</a></li>
+				                <li class="services-list__list-item"><a href="#">Массажист</a></li>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				            </ul>
+				            <ul class="services-list__list" id='list-2'>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Гинеколог</a></li>
+				                <li class="services-list__list-item"><a href="#">Эндокринолог</a></li>
+				                <li class="services-list__list-item"><a href="#">Дерматолог</a></li>
+				                <li class="services-list__list-item"><a href="#">Дерматовенеролог</a></li>
+				                <li class="services-list__list-item"><a href="#">Гирудотерапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Гастроэнтеролог</a></li>
+				                <li class="services-list__list-item"><a href="#">Неверолог</a></li>
+				                <li class="services-list__list-item"><a href="#">Массажист</a></li>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				            </ul>
+				            <ul class="services-list__list" id='list-3'>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Гинеколог</a></li>
+				                <li class="services-list__list-item"><a href="#">Эндокринолог</a></li>
+				                <li class="services-list__list-item"><a href="#">Дерматолог</a></li>
+				                <li class="services-list__list-item"><a href="#">Дерматовенеролог</a></li>
+				                <li class="services-list__list-item"><a href="#">Гирудотерапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Гастроэнтеролог</a></li>
+				                <li class="services-list__list-item"><a href="#">Неверолог</a></li>
+				                <li class="services-list__list-item"><a href="#">Массажист</a></li>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				            </ul>
+				            <ul class="services-list__list" id='list-4'>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Гинеколог</a></li>
+				                <li class="services-list__list-item"><a href="#">Эндокринолог</a></li>
+				                <li class="services-list__list-item"><a href="#">Дерматолог</a></li>
+				                <li class="services-list__list-item"><a href="#">Дерматовенеролог</a></li>
+				                <li class="services-list__list-item"><a href="#">Гирудотерапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Гастроэнтеролог</a></li>
+				                <li class="services-list__list-item"><a href="#">Неверолог</a></li>
+				                <li class="services-list__list-item"><a href="#">Массажист</a></li>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				            </ul>
+				            <div class="services-list__aditional">
+				                <p>Дополнительно</p>
+				                <ul class="services-list__aditional-list">
+				                    <li class="services-list__list-item"><a href="#">Вызов врача на дом</a></li>
+				                    <li class="services-list__list-item"><a href="#">Вакуум-градиентная терапия</a></li>
+				                </ul>
+				            </div>
+				        </div>
+				    </div>
+				</section>
+				<section id="registration-doctor-appointment" class="registration-doctor-appointment">
+				    <h2 class="registration-doctor-appointment__title h2">
+				        Запись на приём
+				    </h2>
+				    <form action="" method="POST">
+				        <div class="registration-doctor-appointment__current-city">
+				            <p style="font-weight: 700">Ваш город:</p>
+				            <p class="registration-doctor-appointment__city-name"></p>
+				            <select id="registration-doctor__select-office" name="registration-doctor__select-office">
+				                <option value="ст.Ессентукская">ст.Ессентукская</option>
+				                <option value="ст.Ессентукская2">ст.Ессентукская2</option>
+				                <option value="ст.Ессентукская3">ст.Ессентукская2</option>
+				            </select>
+				        </div>
+				        <div class="registration-doctor-appointment__form-group">
+				            <input type="text" placeholder="Имя" name="name">
+				            <input type="text" name="tel">
+				            <input class="btn primary-btn" type="submit" value="Записаться на приём">
+				        </div>
+				        <p class="registration-doctor-appointment__agree">
+				            Нажимая на кнопку, вы даёте согласие <a href="#">на обработку персональных данных.</a>
+				        </p>
+				        <div class="registration-doctor-appointment__kaptcha">
+				            <div id="html_element"></div>
+				        </div>
+				    </form>
+				</section>
+				<div class="pulsating-circle">
+				    <span class="pulsating-circle__text">Запись на приём</span>
+				</div>
+			</div>
+		</main>
 		<footer class="footer">
 		    <div class="container">
 		        <div class="footer__top">
