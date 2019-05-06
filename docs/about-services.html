@@ -21,7 +21,13 @@
 		</script>
 		<link rel="stylesheet" href="./styles/main.css">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic" rel="stylesheet">
-		
+		<script type="text/javascript">
+			var onloadCallback = function() {
+			  grecaptcha.render('html_element', {
+				'sitekey' : '6LcApqAUAAAAAGhd3e4VAAI58MLIVAjKPJmnDMti'
+			  });
+			};
+		</script>
 	</head>
 	<body>
 		<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -203,7 +209,7 @@
 		                <ul class="main-nav">
 		                    <li class="main-nav__item"><a href="/about-company.html">О компании</a></li>
 		                    <li class="main-nav__item"><a href="/doctors.html">Врачи</a></li>
-		                    <li class="main-nav__item"><a href="/services.html">Услуги</a></li>
+		                    <li class="main-nav__item"><a href="/about-services.html">Услуги</a></li>
 		                    <li class="main-nav__item"><a href="/schedule.html">Расписание</a></li>
 		                    <li class="main-nav__item"><a href="#">Цены</a></li>
 		                    <li class="main-nav__item"><a href="#">Акции</a></li>
@@ -217,63 +223,143 @@
 		</header>
 		<div class="main">
             <div class="container">
-				<ul class="breadcrumbs">
-					<li class="breadcrumbs__item"><a href="#">Главная</a></li>
-					<li class="breadcrumbs__item"><a href="#">Врачи</a></li>
-					<li class="breadcrumbs__item"><a href="#">О компании</a></li>
-				</ul>
-                <section class="about-company">
-                    <h1 class="about-company__title">
-                        О компании
-                    </h1>
-                    <div class="about-company__text">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est libero aperiam laudantium nostrum. Ex beatae cupiditate nesciunt at quaerat nihil, nulla quis reprehenderit obcaecati, dignissimos libero voluptatem commodi id suscipit.
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi, quibusdam, consectetur laborum sed ut in inventore quae rerum quos velit, recusandae at illum nam. Pariatur hic suscipit praesentium non consequatur!
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus minima quae ab? Laboriosam fugit voluptates sit quod recusandae, temporibus odio, natus adipisci saepe quasi quo ex itaque illum error dicta.
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum quo numquam quod perferendis rerum, praesentium fuga quis adipisci vitae ea provident sint consequatur laborum eveniet? Quasi pariatur debitis accusantium facere.
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quod placeat nemo laborum amet, sunt ut officia voluptates obcaecati repellat culpa et, omnis, in explicabo odio voluptas non. Atque, illum?
-                        </p>
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit quia rem odio, nobis earum sit culpa vel ut est eligendi atque facilis laboriosam aut quo adipisci libero similique possimus? Itaque.
-                        </p>
-                    </div>
-                    <p class="about-company__video">
-                        <iframe src="https://www.youtube.com/embed/qDM89PbqJww" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </p>
-                </section>
-                <section id="registration-doctor-appointment" class="registration-doctor-appointment">
-                    <h2 class="registration-doctor-appointment__title h2">
-                        Запись на приём
-                    </h2>
-                    <form action="" method="POST">
-                        <div class="registration-doctor-appointment__current-city">
-                            <p style="font-weight: 700">Ваш город:</p>
-                            <p class="registration-doctor-appointment__city-name"></p>
-                            <select id="registration-doctor__select-office" name="registration-doctor__select-office">
-                                <option value="ст.Ессентукская">ст.Ессентукская</option>
-                                <option value="ст.Ессентукская2">ст.Ессентукская2</option>
-                                <option value="ст.Ессентукская3">ст.Ессентукская2</option>
-                            </select>
-                        </div>
-                        <div class="registration-doctor-appointment__form-group">
-                            <input type="text" placeholder="Имя" name="name">
-                            <input type="text" name="tel">
-                            <input class="btn primary-btn" type="submit" value="Записаться на приём">
-                        </div>
-                        <p class="registration-doctor-appointment__agree">
-                            Нажимая на кнопку, вы даёте согласие <a href="#">на обработку персональных данных.</a>
-                        </p>
-                        <div class="registration-doctor-appointment__kaptcha">
-                            <div id="html_element"></div>
-                        </div>
-                    </form>
-                </section>
-                <div class="pulsating-circle">
-                    <span class="pulsating-circle__text">Запись на приём</span>
-                </div>
+                <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item"><a href="#">Главная</a></li>
+                    <li class="breadcrumbs__item"><a href="#">Услуги</a></li>
+                    <li class="breadcrumbs__item"><a href="#">Акушер-гинеколог</a></li>
+                </ul>
+           
+			<section class="services-description">
+			    <h1 class="services-description__title">
+			        Гинеколог (акушер-гинеколог)
+			    </h1>
+			    <div class="services-description__content">
+			        <ul class="services-description__tabs tabs-list">
+			            <li class="services-description__tab tabs-list__item active"><a href="#services-desc-ask">Описание</a></li>
+			            <li class="services-description__tab tabs-list__item"><a href="#services-desc-price">Цены</a></li>
+			            <!-- <li class="services-description__tab tabs-list__item"><a href="#tab-content-3">Врачи</a></li> -->
+			            <li class="services-description__tab tabs-list__item"><a href="#registration-doctor-appointment">Запись на приём</a></li>
+			        </ul>
+			        <div class="services-description__tab-content services-description__tab-content--main-info">
+			            <p class="services-description__tab-content-text">
+			                Акушер-гинеколог – это специалист в области профилактики, 
+			                диагностики и лечения заболеваний женской репродуктивной 
+			                системы. Врач этой специальности также занимается ведением 
+			                беременности вплоть до родов и впоследствии контролирует 
+			                восстановительный послеродовой период. Но отдельного 
+			                внимания заслуживают знания и навыки акушеров-гинекологов 
+			                в вопросах профилактики и своевременного выявления 
+			                гинекологических патологий. Благодаря регулярному 
+			                обследованию у врача можно предотвратить ряд заболеваний 
+			                и существенно повысить шансы на полное выздоровление.
+			            </p>
+			            <div class="services-description__content-image">
+			                <img  class="img-responsive" src="img/services-description-image.jpg" alt="">
+			            </div>
+			        </div>
+			        <p class="services-description__content-text">
+			            Если вы ищете гинеколога в Ессентуках, приглашаем вас посетить <span style="color:#68ab4c">«Гармония»</span>. Внимание к вашему здоровью, комплексный индивидуальный подход и профессионализм врачей – ключевые преимущества обслуживания в нашем центре.
+			        </p>
+			        <div id="services-desc-ask" class="services-description__ask">
+			            <div class="services-description__ask-heading">
+			                <p class="services-description__ask-icon-and-text">
+			                    <span>
+			                        <svg class="icon icon-question-circle-o"><use xlink:href="#icon-question-circle-o"></use></svg>
+			                    </span>
+			                    <span>Когда нужно обращаться к врачу</span>
+			                </p>
+			                <p class="services-description__ask-answer">
+			                    Плановый прием гинеколога не реже 1 раза в год должен стать обязательным профилактическим мероприятием для любой женщины. 
+			                    Посетить врача необходимо, даже если у вас нет жалоб на состояние здоровья, изменения в самочувствии или в нарушении менструального цикла.
+			                </p>
+			            </div>
+			            <a href="#" class="btn secondary-btn">Задать вопрос</a>
+			        </div>
+			        <div id="services-desc-price"  class="services-description__price">
+			            <h3>Цены</h3>
+			            <ul class="services-description__price-tabs tabs-list ">
+			                <li class="tabs-list__item services-description__price-tab active"><a href="#">Гинекология и акушерство - врачебные приемы</a></li>
+			                <li class="tabs-list__item services-description__price-tab" ><a href="#">Гинекология и акушерство - манипуляции</a></li>
+			            </ul>
+			            <div id="tab-price-1" class="services-description__price-tabs-content active">
+			                <p class="services-description__price-tabs-content-title">Наименование</p>
+			                <ul id="price-list-1" class="services-description__price-tabs-content-list">
+			                    <li>
+			                        <span>Прием (осмотр, консультация) врача-акушера-гинеколога первичный</span>
+			                        <span>850&nbsp;<span class="rouble">a</span> </span>
+			                    </li>
+			                    <li>
+			                        <span>Прием (осмотр, консультация) врача-акушера-гинеколога первичный</span>
+			                        <span>850&nbsp;<span class="rouble">a</span> </span>
+			                    </li>
+			                    <li>
+			                        <span>Прием (осмотр, консультация) врача-акушера-гинеколога первичный</span>
+			                        <span>850&nbsp;<span class="rouble">a</span> </span>
+			                    </li>
+			                    <li>
+			                        <span>Прием (осмотр, консультация) врача-акушера-гинеколога первичный</span>
+			                        <span>850&nbsp;<span class="rouble">a</span> </span>
+			                    </li>
+			                </ul>
+			            </div>
+			            <div id="tab-price-2" class="services-description__price-tabs-content">
+			                <p class="services-description__price-tabs-content-title">Наименование</p>
+			                <ul class="services-description__price-tabs-content-list">
+			                    <li>
+			                        <span>Прием (осмотр, консультация) врача-акушера-гинеколога первичный</span>
+			                        <span>850&nbsp;<span class="rouble">a</span></span>
+			                    </li>
+			                    <li>
+			                        <span>Прием (осмотр, консультация) врача-акушера-гинеколога первичный</span>
+			                        <span>850&nbsp;<span class="rouble">a</span> </span>
+			                    </li>
+			                    <li>
+			                        <span>Прием (осмотр, консультация) врача-акушера-гинеколога первичный</span>
+			                        <span>850&nbsp;<span class="rouble">a</span> </span>
+			                    </li>
+			                    <li>
+			                        <span>Прием (осмотр, консультация) врача-акушера-гинеколога первичный</span>
+			                        <span>850&nbsp;<span class="rouble">a</span> </span>
+			                    </li>
+			                    <li>
+			                        <span>Прием (осмотр, консультация) врача-акушера-гинеколога первичный</span>
+			                        <span>850&nbsp;<span class="rouble">a</span> </span>
+			                    </li>
+			                </ul>
+			            </div>
+			        </div>
+			    </div>
+			</section>
+			<section id="registration-doctor-appointment" class="registration-doctor-appointment">
+			    <h2 class="registration-doctor-appointment__title h2">
+			        Запись на приём
+			    </h2>
+			    <form action="" method="POST">
+			        <div class="registration-doctor-appointment__current-city">
+			            <p style="font-weight: 700">Ваш город:</p>
+			            <p class="registration-doctor-appointment__city-name"></p>
+			            <select id="registration-doctor__select-office" name="registration-doctor__select-office">
+			                <option value="ст.Ессентукская">ст.Ессентукская</option>
+			                <option value="ст.Ессентукская2">ст.Ессентукская2</option>
+			                <option value="ст.Ессентукская3">ст.Ессентукская2</option>
+			            </select>
+			        </div>
+			        <div class="registration-doctor-appointment__form-group">
+			            <input type="text" placeholder="Имя" name="name">
+			            <input type="text" name="tel">
+			            <input class="btn primary-btn" type="submit" value="Записаться на приём">
+			        </div>
+			        <p class="registration-doctor-appointment__agree">
+			            Нажимая на кнопку, вы даёте согласие <a href="#">на обработку персональных данных.</a>
+			        </p>
+			        <div class="registration-doctor-appointment__kaptcha">
+			            <div id="html_element"></div>
+			        </div>
+			    </form>
+			</section>
+			<div class="pulsating-circle">
+			    <span class="pulsating-circle__text">Запись на приём</span>
+			</div>
             </div>
         </div>
 		<footer class="footer">

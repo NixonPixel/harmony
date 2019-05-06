@@ -21,7 +21,33 @@
 		</script>
 		<link rel="stylesheet" href="./styles/main.css">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic" rel="stylesheet">
-		
+		<script src="https://api-maps.yandex.ru/2.1/?apikey=736499a5-6faf-49e4-976c-368497e3aa12&lang=ru_RU" type="text/javascript">
+		</script>
+		 <script type="text/javascript">
+			ymaps.ready(init);    
+			function init() {
+				var myMap = new ymaps.Map('map', {
+					center: [44.02605, 42.874756],
+					zoom: 16,
+					controls: []
+				}, {
+					searchControlProvider: 'yandex#search'
+				});
+
+				var placemark = new ymaps.Placemark(myMap.getCenter(), {
+					// Зададим содержимое заголовка балуна.
+					balloonContentHeader: '<a href = "#">Медицинских центр «Гармония»</a><br>',
+					// Зададим содержимое основной части балуна.
+					balloonContentBody: 
+						'<a href="tel:+7-123-456-78-90">+7 (928) 348 33 44</a><br/>' +
+						'<b>Часы работы</b> <br/> с 6:00 до 18:00',
+				});
+				// Добавим метку на карту.
+				myMap.geoObjects.add(placemark);
+				// Откроем балун на метке.
+				placemark.balloon.open();
+			}
+		</script>
 	</head>
 	<body>
 		<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -203,7 +229,7 @@
 		                <ul class="main-nav">
 		                    <li class="main-nav__item"><a href="/about-company.html">О компании</a></li>
 		                    <li class="main-nav__item"><a href="/doctors.html">Врачи</a></li>
-		                    <li class="main-nav__item"><a href="/services.html">Услуги</a></li>
+		                    <li class="main-nav__item"><a href="/about-services.html">Услуги</a></li>
 		                    <li class="main-nav__item"><a href="/schedule.html">Расписание</a></li>
 		                    <li class="main-nav__item"><a href="#">Цены</a></li>
 		                    <li class="main-nav__item"><a href="#">Акции</a></li>
@@ -217,63 +243,15 @@
 		</header>
 		<div class="main">
             <div class="container">
-				<ul class="breadcrumbs">
-					<li class="breadcrumbs__item"><a href="#">Главная</a></li>
-					<li class="breadcrumbs__item"><a href="#">Врачи</a></li>
-					<li class="breadcrumbs__item"><a href="#">О компании</a></li>
-				</ul>
-                <section class="about-company">
-                    <h1 class="about-company__title">
-                        О компании
-                    </h1>
-                    <div class="about-company__text">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est libero aperiam laudantium nostrum. Ex beatae cupiditate nesciunt at quaerat nihil, nulla quis reprehenderit obcaecati, dignissimos libero voluptatem commodi id suscipit.
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi, quibusdam, consectetur laborum sed ut in inventore quae rerum quos velit, recusandae at illum nam. Pariatur hic suscipit praesentium non consequatur!
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus minima quae ab? Laboriosam fugit voluptates sit quod recusandae, temporibus odio, natus adipisci saepe quasi quo ex itaque illum error dicta.
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum quo numquam quod perferendis rerum, praesentium fuga quis adipisci vitae ea provident sint consequatur laborum eveniet? Quasi pariatur debitis accusantium facere.
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quod placeat nemo laborum amet, sunt ut officia voluptates obcaecati repellat culpa et, omnis, in explicabo odio voluptas non. Atque, illum?
-                        </p>
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit quia rem odio, nobis earum sit culpa vel ut est eligendi atque facilis laboriosam aut quo adipisci libero similique possimus? Itaque.
-                        </p>
-                    </div>
-                    <p class="about-company__video">
-                        <iframe src="https://www.youtube.com/embed/qDM89PbqJww" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </p>
-                </section>
-                <section id="registration-doctor-appointment" class="registration-doctor-appointment">
-                    <h2 class="registration-doctor-appointment__title h2">
-                        Запись на приём
-                    </h2>
-                    <form action="" method="POST">
-                        <div class="registration-doctor-appointment__current-city">
-                            <p style="font-weight: 700">Ваш город:</p>
-                            <p class="registration-doctor-appointment__city-name"></p>
-                            <select id="registration-doctor__select-office" name="registration-doctor__select-office">
-                                <option value="ст.Ессентукская">ст.Ессентукская</option>
-                                <option value="ст.Ессентукская2">ст.Ессентукская2</option>
-                                <option value="ст.Ессентукская3">ст.Ессентукская2</option>
-                            </select>
-                        </div>
-                        <div class="registration-doctor-appointment__form-group">
-                            <input type="text" placeholder="Имя" name="name">
-                            <input type="text" name="tel">
-                            <input class="btn primary-btn" type="submit" value="Записаться на приём">
-                        </div>
-                        <p class="registration-doctor-appointment__agree">
-                            Нажимая на кнопку, вы даёте согласие <a href="#">на обработку персональных данных.</a>
-                        </p>
-                        <div class="registration-doctor-appointment__kaptcha">
-                            <div id="html_element"></div>
-                        </div>
-                    </form>
-                </section>
-                <div class="pulsating-circle">
-                    <span class="pulsating-circle__text">Запись на приём</span>
-                </div>
+                <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item"><a href="#">Главная</a></li>
+                    <li class="breadcrumbs__item"><a href="#">Контакты</a></li>
+                </ul>
+				<section class="contacts">
+				    <h1 class="page-title">Контакты цетра «Гармония» в Ессентуках</h1>
+				    <h2 class="contacts__title">Контактная информация</h2>
+				    <div id="map" class="contacts__map" style="height: 400px"></div>
+				</section>
             </div>
         </div>
 		<footer class="footer">
@@ -311,12 +289,5 @@
 		</footer>
 		<script src="./js/main.js" defer></script>
 		<script src="./js/svgxuse.js" defer></script>
-		<script type="text/javascript">
-			var onloadCallback = function() {
-			  grecaptcha.render('html_element', {
-				'sitekey' : '6LcApqAUAAAAAGhd3e4VAAI58MLIVAjKPJmnDMti'
-			  });
-			};
-		</script>
 	</body>
 </html>

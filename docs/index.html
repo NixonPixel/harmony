@@ -203,7 +203,7 @@
 		                <ul class="main-nav">
 		                    <li class="main-nav__item"><a href="/about-company.html">О компании</a></li>
 		                    <li class="main-nav__item"><a href="/doctors.html">Врачи</a></li>
-		                    <li class="main-nav__item"><a href="/services.html">Услуги</a></li>
+		                    <li class="main-nav__item"><a href="/about-services.html">Услуги</a></li>
 		                    <li class="main-nav__item"><a href="/schedule.html">Расписание</a></li>
 		                    <li class="main-nav__item"><a href="#">Цены</a></li>
 		                    <li class="main-nav__item"><a href="#">Акции</a></li>
@@ -215,67 +215,174 @@
 		        </div>
 		    </div>
 		</header>
-		<div class="main">
-            <div class="container">
-				<ul class="breadcrumbs">
-					<li class="breadcrumbs__item"><a href="#">Главная</a></li>
-					<li class="breadcrumbs__item"><a href="#">Врачи</a></li>
-					<li class="breadcrumbs__item"><a href="#">О компании</a></li>
-				</ul>
-                <section class="about-company">
-                    <h1 class="about-company__title">
-                        О компании
-                    </h1>
-                    <div class="about-company__text">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est libero aperiam laudantium nostrum. Ex beatae cupiditate nesciunt at quaerat nihil, nulla quis reprehenderit obcaecati, dignissimos libero voluptatem commodi id suscipit.
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi, quibusdam, consectetur laborum sed ut in inventore quae rerum quos velit, recusandae at illum nam. Pariatur hic suscipit praesentium non consequatur!
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus minima quae ab? Laboriosam fugit voluptates sit quod recusandae, temporibus odio, natus adipisci saepe quasi quo ex itaque illum error dicta.
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum quo numquam quod perferendis rerum, praesentium fuga quis adipisci vitae ea provident sint consequatur laborum eveniet? Quasi pariatur debitis accusantium facere.
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quod placeat nemo laborum amet, sunt ut officia voluptates obcaecati repellat culpa et, omnis, in explicabo odio voluptas non. Atque, illum?
-                        </p>
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit quia rem odio, nobis earum sit culpa vel ut est eligendi atque facilis laboriosam aut quo adipisci libero similique possimus? Itaque.
-                        </p>
-                    </div>
-                    <p class="about-company__video">
-                        <iframe src="https://www.youtube.com/embed/qDM89PbqJww" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </p>
-                </section>
-                <section id="registration-doctor-appointment" class="registration-doctor-appointment">
-                    <h2 class="registration-doctor-appointment__title h2">
-                        Запись на приём
-                    </h2>
-                    <form action="" method="POST">
-                        <div class="registration-doctor-appointment__current-city">
-                            <p style="font-weight: 700">Ваш город:</p>
-                            <p class="registration-doctor-appointment__city-name"></p>
-                            <select id="registration-doctor__select-office" name="registration-doctor__select-office">
-                                <option value="ст.Ессентукская">ст.Ессентукская</option>
-                                <option value="ст.Ессентукская2">ст.Ессентукская2</option>
-                                <option value="ст.Ессентукская3">ст.Ессентукская2</option>
-                            </select>
-                        </div>
-                        <div class="registration-doctor-appointment__form-group">
-                            <input type="text" placeholder="Имя" name="name">
-                            <input type="text" name="tel">
-                            <input class="btn primary-btn" type="submit" value="Записаться на приём">
-                        </div>
-                        <p class="registration-doctor-appointment__agree">
-                            Нажимая на кнопку, вы даёте согласие <a href="#">на обработку персональных данных.</a>
-                        </p>
-                        <div class="registration-doctor-appointment__kaptcha">
-                            <div id="html_element"></div>
-                        </div>
-                    </form>
-                </section>
-                <div class="pulsating-circle">
-                    <span class="pulsating-circle__text">Запись на приём</span>
-                </div>
-            </div>
-        </div>
+		<main class="main">
+			<div class="container">
+				<h1 class="page-title">
+					Сеть многопрофильных медицинских центров «Гармония»
+				</h1>
+				<section class="promo-slider">
+				    <ul class="promo-slider__slider-list">
+				        <li class="promo-slider__slider-item">
+				            <div class="promo-slider__slider-item-img-container">
+				                <picture>
+				                    <img class="img-responsive" src="img/index-slider-img1.jpg" srcset="img/index-slider-img1@2x.jpg 2x" alt="">
+				                </picture>
+				                <div class="time-to-end-action">
+				                    <div class="time-to-end-action__text">
+				                        <p>До конца акции осталось</p>
+				                        <p>
+				                            <span>28 дней</span>
+				                            <span>14 часов</span>
+				                            <span>06 минут</span>
+				                        </p>
+				                    </div>
+				                </div>
+				            </div>
+				        </li>
+				        <li class="promo-slider__slider-item">
+				            <div class="promo-slider__slider-item-img-container">
+				                <picture>
+				                    <img class="img-responsive" src="img/index-slider-img1.jpg" srcset="img/index-slider-img1@2x.jpg 2x" alt="">
+				                </picture>
+				                <div class="time-to-end-action">
+				                    <div class="time-to-end-action__text">
+				                        <p>До конца акции осталось</p>
+				                        <p>
+				                            <span>28 дней</span>
+				                            <span>14 часов</span>
+				                            <span>06 минут</span>
+				                        </p>
+				                    </div>
+				                </div>
+				            </div>
+				        </li>
+				    </ul>
+				</section>
+				<section class="services-list">
+				    <div class="services-list__container">
+				        <ul class="services-list__tabs">
+				            <li id="tab-1" class="services-list__tab active">
+				                <span>Для взрослых</span>
+				            </li>
+				            <li id="tab-2" class="services-list__tab">
+				                <span>Для детей</span>
+				            </li>
+				            <li id="tab-3" class="services-list__tab">
+				                <span>Проф.осмотры</span>
+				            </li>
+				            <li id="tab-4" class="services-list__tab">
+				                <span>Диагностика</span>
+				            </li>
+				        </ul>
+				        <div class="services-list__tabs-content">
+				            <ul class="services-list__list active" id='list-1'>
+				                <li class="services-list__list-item"><a href="about-services.html">Терапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Гинеколог</a></li>
+				                <li class="services-list__list-item"><a href="#">Эндокринолог</a></li>
+				                <li class="services-list__list-item"><a href="#">Дерматолог</a></li>
+				                <li class="services-list__list-item"><a href="#">Дерматовенеролог</a></li>
+				                <li class="services-list__list-item"><a href="#">Гирудотерапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Гастроэнтеролог</a></li>
+				                <li class="services-list__list-item"><a href="#">Неверолог</a></li>
+				                <li class="services-list__list-item"><a href="#">Массажист</a></li>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				            </ul>
+				            <ul class="services-list__list" id='list-2'>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Гинеколог</a></li>
+				                <li class="services-list__list-item"><a href="#">Эндокринолог</a></li>
+				                <li class="services-list__list-item"><a href="#">Дерматолог</a></li>
+				                <li class="services-list__list-item"><a href="#">Дерматовенеролог</a></li>
+				                <li class="services-list__list-item"><a href="#">Гирудотерапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Гастроэнтеролог</a></li>
+				                <li class="services-list__list-item"><a href="#">Неверолог</a></li>
+				                <li class="services-list__list-item"><a href="#">Массажист</a></li>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				            </ul>
+				            <ul class="services-list__list" id='list-3'>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Гинеколог</a></li>
+				                <li class="services-list__list-item"><a href="#">Эндокринолог</a></li>
+				                <li class="services-list__list-item"><a href="#">Дерматолог</a></li>
+				                <li class="services-list__list-item"><a href="#">Дерматовенеролог</a></li>
+				                <li class="services-list__list-item"><a href="#">Гирудотерапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Гастроэнтеролог</a></li>
+				                <li class="services-list__list-item"><a href="#">Неверолог</a></li>
+				                <li class="services-list__list-item"><a href="#">Массажист</a></li>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				            </ul>
+				            <ul class="services-list__list" id='list-4'>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Гинеколог</a></li>
+				                <li class="services-list__list-item"><a href="#">Эндокринолог</a></li>
+				                <li class="services-list__list-item"><a href="#">Дерматолог</a></li>
+				                <li class="services-list__list-item"><a href="#">Дерматовенеролог</a></li>
+				                <li class="services-list__list-item"><a href="#">Гирудотерапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Гастроэнтеролог</a></li>
+				                <li class="services-list__list-item"><a href="#">Неверолог</a></li>
+				                <li class="services-list__list-item"><a href="#">Массажист</a></li>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
+				            </ul>
+				            <div class="services-list__aditional">
+				                <p>Дополнительно</p>
+				                <ul class="services-list__aditional-list">
+				                    <li class="services-list__list-item"><a href="#">Вызов врача на дом</a></li>
+				                    <li class="services-list__list-item"><a href="#">Вакуум-градиентная терапия</a></li>
+				                </ul>
+				            </div>
+				        </div>
+				    </div>
+				</section>
+				<section id="registration-doctor-appointment" class="registration-doctor-appointment">
+				    <h2 class="registration-doctor-appointment__title h2">
+				        Запись на приём
+				    </h2>
+				    <form action="" method="POST">
+				        <div class="registration-doctor-appointment__current-city">
+				            <p style="font-weight: 700">Ваш город:</p>
+				            <p class="registration-doctor-appointment__city-name"></p>
+				            <select id="registration-doctor__select-office" name="registration-doctor__select-office">
+				                <option value="ст.Ессентукская">ст.Ессентукская</option>
+				                <option value="ст.Ессентукская2">ст.Ессентукская2</option>
+				                <option value="ст.Ессентукская3">ст.Ессентукская2</option>
+				            </select>
+				        </div>
+				        <div class="registration-doctor-appointment__form-group">
+				            <input type="text" placeholder="Имя" name="name">
+				            <input type="text" name="tel">
+				            <input class="btn primary-btn" type="submit" value="Записаться на приём">
+				        </div>
+				        <p class="registration-doctor-appointment__agree">
+				            Нажимая на кнопку, вы даёте согласие <a href="#">на обработку персональных данных.</a>
+				        </p>
+				        <div class="registration-doctor-appointment__kaptcha">
+				            <div id="html_element"></div>
+				        </div>
+				    </form>
+				</section>
+				<div class="pulsating-circle">
+				    <span class="pulsating-circle__text">Запись на приём</span>
+				</div>
+			</div>
+		</main>
 		<footer class="footer">
 		    <div class="container">
 		        <div class="footer__top">
