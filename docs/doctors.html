@@ -21,7 +21,6 @@
 		</script>
 		<link rel="stylesheet" href="./styles/main.css">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic" rel="stylesheet">
-		
 	</head>
 	<body>
 		<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -203,7 +202,7 @@
 		                <ul class="main-nav">
 		                    <li class="main-nav__item"><a href="/about-company.html">О компании</a></li>
 		                    <li class="main-nav__item"><a href="/doctors.html">Врачи</a></li>
-		                    <li class="main-nav__item"><a href="/services.html">Услуги</a></li>
+		                    <li class="main-nav__item"><a href="/about-services.html">Услуги</a></li>
 		                    <li class="main-nav__item"><a href="/schedule.html">Расписание</a></li>
 		                    <li class="main-nav__item"><a href="#">Цены</a></li>
 		                    <li class="main-nav__item"><a href="#">Акции</a></li>
@@ -217,63 +216,265 @@
 		</header>
 		<div class="main">
             <div class="container">
-				<ul class="breadcrumbs">
-					<li class="breadcrumbs__item"><a href="#">Главная</a></li>
-					<li class="breadcrumbs__item"><a href="#">Врачи</a></li>
-					<li class="breadcrumbs__item"><a href="#">О компании</a></li>
-				</ul>
-                <section class="about-company">
-                    <h1 class="about-company__title">
-                        О компании
-                    </h1>
-                    <div class="about-company__text">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est libero aperiam laudantium nostrum. Ex beatae cupiditate nesciunt at quaerat nihil, nulla quis reprehenderit obcaecati, dignissimos libero voluptatem commodi id suscipit.
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi, quibusdam, consectetur laborum sed ut in inventore quae rerum quos velit, recusandae at illum nam. Pariatur hic suscipit praesentium non consequatur!
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus minima quae ab? Laboriosam fugit voluptates sit quod recusandae, temporibus odio, natus adipisci saepe quasi quo ex itaque illum error dicta.
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum quo numquam quod perferendis rerum, praesentium fuga quis adipisci vitae ea provident sint consequatur laborum eveniet? Quasi pariatur debitis accusantium facere.
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quod placeat nemo laborum amet, sunt ut officia voluptates obcaecati repellat culpa et, omnis, in explicabo odio voluptas non. Atque, illum?
-                        </p>
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit quia rem odio, nobis earum sit culpa vel ut est eligendi atque facilis laboriosam aut quo adipisci libero similique possimus? Itaque.
-                        </p>
-                    </div>
-                    <p class="about-company__video">
-                        <iframe src="https://www.youtube.com/embed/qDM89PbqJww" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </p>
-                </section>
-                <section id="registration-doctor-appointment" class="registration-doctor-appointment">
-                    <h2 class="registration-doctor-appointment__title h2">
-                        Запись на приём
-                    </h2>
-                    <form action="" method="POST">
-                        <div class="registration-doctor-appointment__current-city">
-                            <p style="font-weight: 700">Ваш город:</p>
-                            <p class="registration-doctor-appointment__city-name"></p>
-                            <select id="registration-doctor__select-office" name="registration-doctor__select-office">
-                                <option value="ст.Ессентукская">ст.Ессентукская</option>
-                                <option value="ст.Ессентукская2">ст.Ессентукская2</option>
-                                <option value="ст.Ессентукская3">ст.Ессентукская2</option>
-                            </select>
-                        </div>
-                        <div class="registration-doctor-appointment__form-group">
-                            <input type="text" placeholder="Имя" name="name">
-                            <input type="text" name="tel">
-                            <input class="btn primary-btn" type="submit" value="Записаться на приём">
-                        </div>
-                        <p class="registration-doctor-appointment__agree">
-                            Нажимая на кнопку, вы даёте согласие <a href="#">на обработку персональных данных.</a>
-                        </p>
-                        <div class="registration-doctor-appointment__kaptcha">
-                            <div id="html_element"></div>
-                        </div>
-                    </form>
-                </section>
-                <div class="pulsating-circle">
-                    <span class="pulsating-circle__text">Запись на приём</span>
-                </div>
+			<section class="doctors">
+			    <h1 class="doctors__title page-title">
+			        Врачи
+			    </h1>
+			    <div class="doctors__filter">
+			        <div class="doctors__filter-item">
+			            <select class="doctors__filter-select filter-select" name="doctors-category" id="doctorsCategory">
+			                <option value="all">Все Врачи</option>
+			                <option value="adults">Взрослые</option>
+			                <option value="childrens">Детские</option>
+			            </select>
+			        </div>
+			        <div class="doctors__filter-item">
+			            <select class="doctors__filter-select filter-select">
+			                <option>Выбрать специальность</option>
+			                <option>Акушер-гинеколог</option>
+			                <option>Аллерголог-иммунолог</option>
+			                <option>Андролог</option>
+			                <option>Врач общей практики</option>
+			                <option>Врач ультразвуковой диагностики (УЗИ)</option>   
+			                <option>Врач функциональной диагностики</option>  
+			                <option>Гастроэнтеролог</option>
+			                <option>Дерматовенеролог</option>
+			                <option>Дерматолог</option>
+			                <option>Диетолог</option>
+			                <option>Кардиолог</option>
+			                <option>Колопроктолог</option>
+			                <option>Косметолог</option>
+			                <option>Маммолог</option>
+			                <option>Мануальный терапевт</option>
+			                <option>Массажист</option>
+			                <option>Невролог</option>
+			                <option>Онколог</option>
+			                <option>Отоларинголог (ЛОР)</option>
+			                <option>Офтальмолог</option>
+			                <option>Педиатр</option>
+			            </select>
+			        </div>
+			        <div class="doctors__filter-item doctors__filter-search filter__search">
+			            <input type="search" placeholder="Введите ФИО врача">
+			            <span class="search__icon">
+			                <svg class="icon icon-search-icon"><use xlink:href="#icon-search-icon"></use></svg>
+			            </span>
+			        </div>
+			    </div>
+			    <ul class="doctors__list">
+			        <li class="doctors__list-item">
+			            <a href="/about-doctor.html">
+			                <div class="doctors__list-item-img">
+			                    <img src="img/all-doctors-img.jpg" alt="">
+			                </div>
+			                <h2 class="doctors__list-item-name">Десятерик Марина Григорьевна</h2>
+			                <p class="doctors__list-item-position">Гинеколог-эндокринолог, детский гинеколог</p>
+			                <p class="doctors__list-item-experience">
+			                    Стаж: 15 лет
+			                </p>
+			            </a>
+			        </li>
+			        <li class="doctors__list-item">
+			            <a href="/about-doctor.html">
+			                <div class="doctors__list-item-img">
+			                    <img src="img/all-doctors-img.jpg" alt="">
+			                </div>
+			                <h2 class="doctors__list-item-name">Десятерик Марина Григорьевна</h2>
+			                <p class="doctors__list-item-position">Гинеколог-эндокринолог, детский гинеколог</p>
+			                <p class="doctors__list-item-experience">
+			                    Стаж: 15 лет
+			                </p>
+			            </a>
+			        </li>
+			        <li class="doctors__list-item">
+			            <a href="/about-doctor.html">
+			                <div class="doctors__list-item-img">
+			                    <img src="img/all-doctors-img.jpg" alt="">
+			                </div>
+			                <h2 class="doctors__list-item-name">Десятерик Марина Григорьевна</h2>
+			                <p class="doctors__list-item-position">Гинеколог-эндокринолог, детский гинеколог</p>
+			                <p class="doctors__list-item-experience">
+			                    Стаж: 15 лет
+			                </p>
+			            </a>
+			        </li>
+			        <li class="doctors__list-item">
+			            <a href="/about-doctor.html">
+			                <div class="doctors__list-item-img">
+			                    <img src="img/all-doctors-img.jpg" alt="">
+			                </div>
+			                <h2 class="doctors__list-item-name">Десятерик Марина Григорьевна</h2>
+			                <p class="doctors__list-item-position">Гинеколог-эндокринолог, детский гинеколог</p>
+			                <p class="doctors__list-item-experience">
+			                    Стаж: 15 лет
+			                </p>
+			            </a>
+			        </li>
+			        <li class="doctors__list-item">
+			            <a href="/about-doctor.html">
+			                <div class="doctors__list-item-img">
+			                    <img src="img/all-doctors-img.jpg" alt="">
+			                </div>
+			                <h2 class="doctors__list-item-name">Десятерик Марина Григорьевна</h2>
+			                <p class="doctors__list-item-position">Гинеколог-эндокринолог, детский гинеколог</p>
+			                <p class="doctors__list-item-experience">
+			                    Стаж: 15 лет
+			                </p>
+			            </a>
+			        </li>
+			        <li class="doctors__list-item">
+			            <a href="/about-doctor.html">
+			                <div class="doctors__list-item-img">
+			                    <img src="img/all-doctors-img.jpg" alt="">
+			                </div>
+			                <h2 class="doctors__list-item-name">Десятерик Марина Григорьевна</h2>
+			                <p class="doctors__list-item-position">Гинеколог-эндокринолог, детский гинеколог</p>
+			                <p class="doctors__list-item-experience">
+			                    Стаж: 15 лет
+			                </p>
+			            </a>
+			        </li>
+			        <li class="doctors__list-item">
+			            <a href="/about-doctor.html">
+			                <div class="doctors__list-item-img">
+			                    <img src="img/all-doctors-img.jpg" alt="">
+			                </div>
+			                <h2 class="doctors__list-item-name">Десятерик Марина Григорьевна</h2>
+			                <p class="doctors__list-item-position">Гинеколог-эндокринолог, детский гинеколог</p>
+			                <p class="doctors__list-item-experience">
+			                    Стаж: 15 лет
+			                </p>
+			            </a>
+			        </li>
+			        <li class="doctors__list-item">
+			            <a href="/about-doctor.html">
+			                <div class="doctors__list-item-img">
+			                    <img src="img/all-doctors-img.jpg" alt="">
+			                </div>
+			                <h2 class="doctors__list-item-name">Десятерик Марина Григорьевна</h2>
+			                <p class="doctors__list-item-position">Гинеколог-эндокринолог, детский гинеколог</p>
+			                <p class="doctors__list-item-experience">
+			                    Стаж: 15 лет
+			                </p>
+			            </a>
+			        </li>
+			        <li class="doctors__list-item">
+			            <a href="/about-doctor.html">
+			                <div class="doctors__list-item-img">
+			                    <img src="img/all-doctors-img.jpg" alt="">
+			                </div>
+			                <h2 class="doctors__list-item-name">Десятерик Марина Григорьевна</h2>
+			                <p class="doctors__list-item-position">Гинеколог-эндокринолог, детский гинеколог</p>
+			                <p class="doctors__list-item-experience">
+			                    Стаж: 15 лет
+			                </p>
+			            </a>
+			        </li>
+			        <li class="doctors__list-item">
+			            <a href="/about-doctor.html">
+			                <div class="doctors__list-item-img">
+			                    <img src="img/all-doctors-img.jpg" alt="">
+			                </div>
+			                <h2 class="doctors__list-item-name">Десятерик Марина Григорьевна</h2>
+			                <p class="doctors__list-item-position">Гинеколог-эндокринолог, детский гинеколог</p>
+			                <p class="doctors__list-item-experience">
+			                    Стаж: 15 лет
+			                </p>
+			            </a>
+			        </li>
+			        <li class="doctors__list-item">
+			            <a href="/about-doctor.html">
+			                <div class="doctors__list-item-img">
+			                    <img src="img/all-doctors-img.jpg" alt="">
+			                </div>
+			                <h2 class="doctors__list-item-name">Десятерик Марина Григорьевна</h2>
+			                <p class="doctors__list-item-position">Гинеколог-эндокринолог, детский гинеколог</p>
+			                <p class="doctors__list-item-experience">
+			                    Стаж: 15 лет
+			                </p>
+			            </a>
+			        </li>
+			        <li class="doctors__list-item">
+			            <a href="/about-doctor.html">
+			                <div class="doctors__list-item-img">
+			                    <img src="img/all-doctors-img.jpg" alt="">
+			                </div>
+			                <h2 class="doctors__list-item-name">Десятерик Марина Григорьевна</h2>
+			                <p class="doctors__list-item-position">Гинеколог-эндокринолог, детский гинеколог</p>
+			                <p class="doctors__list-item-experience">
+			                    Стаж: 15 лет
+			                </p>
+			            </a>
+			        </li>
+			        <li class="doctors__list-item">
+			            <a href="/about-doctor.html">
+			                <div class="doctors__list-item-img">
+			                    <img src="img/all-doctors-img.jpg" alt="">
+			                </div>
+			                <h2 class="doctors__list-item-name">Десятерик Марина Григорьевна</h2>
+			                <p class="doctors__list-item-position">Гинеколог-эндокринолог, детский гинеколог</p>
+			                <p class="doctors__list-item-experience">
+			                    Стаж: 15 лет
+			                </p>
+			            </a>
+			        </li>
+			        <li class="doctors__list-item">
+			            <a href="/about-doctor.html">
+			                <div class="doctors__list-item-img">
+			                    <img src="img/all-doctors-img.jpg" alt="">
+			                </div>
+			                <h2 class="doctors__list-item-name">Десятерик Марина Григорьевна</h2>
+			                <p class="doctors__list-item-position">Гинеколог-эндокринолог, детский гинеколог</p>
+			                <p class="doctors__list-item-experience">
+			                    Стаж: 15 лет
+			                </p>
+			            </a>
+			        </li>
+			        <li class="doctors__list-item">
+			            <a href="/about-doctor.html">
+			                <div class="doctors__list-item-img">
+			                    <img src="img/all-doctors-img.jpg" alt="">
+			                </div>
+			                <h2 class="doctors__list-item-name">Десятерик Марина Григорьевна</h2>
+			                <p class="doctors__list-item-position">Гинеколог-эндокринолог, детский гинеколог</p>
+			                <p class="doctors__list-item-experience">
+			                    Стаж: 15 лет
+			                </p>
+			            </a>
+			        </li>
+			    </ul>
+			    
+			</section>
+			<section id="registration-doctor-appointment" class="registration-doctor-appointment">
+			    <h2 class="registration-doctor-appointment__title h2">
+			        Запись на приём
+			    </h2>
+			    <form action="" method="POST">
+			        <div class="registration-doctor-appointment__current-city">
+			            <p style="font-weight: 700">Ваш город:</p>
+			            <p class="registration-doctor-appointment__city-name"></p>
+			            <select id="registration-doctor__select-office" name="registration-doctor__select-office">
+			                <option value="ст.Ессентукская">ст.Ессентукская</option>
+			                <option value="ст.Ессентукская2">ст.Ессентукская2</option>
+			                <option value="ст.Ессентукская3">ст.Ессентукская2</option>
+			            </select>
+			        </div>
+			        <div class="registration-doctor-appointment__form-group">
+			            <input type="text" placeholder="Имя" name="name">
+			            <input type="text" name="tel">
+			            <input class="btn primary-btn" type="submit" value="Записаться на приём">
+			        </div>
+			        <p class="registration-doctor-appointment__agree">
+			            Нажимая на кнопку, вы даёте согласие <a href="#">на обработку персональных данных.</a>
+			        </p>
+			        <div class="registration-doctor-appointment__kaptcha">
+			            <div id="html_element"></div>
+			        </div>
+			    </form>
+			</section>
+            <div class="pulsating-circle">
+                <span class="pulsating-circle__text">Запись на приём</span>
+            </div>
             </div>
         </div>
 		<footer class="footer">

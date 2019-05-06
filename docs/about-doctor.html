@@ -21,7 +21,13 @@
 		</script>
 		<link rel="stylesheet" href="./styles/main.css">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic" rel="stylesheet">
-		
+		<script type="text/javascript">
+			var onloadCallback = function() {
+			  grecaptcha.render('html_element', {
+				'sitekey' : '6LcApqAUAAAAAGhd3e4VAAI58MLIVAjKPJmnDMti'
+			  });
+			};
+		</script>
 	</head>
 	<body>
 		<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -203,7 +209,7 @@
 		                <ul class="main-nav">
 		                    <li class="main-nav__item"><a href="/about-company.html">О компании</a></li>
 		                    <li class="main-nav__item"><a href="/doctors.html">Врачи</a></li>
-		                    <li class="main-nav__item"><a href="/services.html">Услуги</a></li>
+		                    <li class="main-nav__item"><a href="/about-services.html">Услуги</a></li>
 		                    <li class="main-nav__item"><a href="/schedule.html">Расписание</a></li>
 		                    <li class="main-nav__item"><a href="#">Цены</a></li>
 		                    <li class="main-nav__item"><a href="#">Акции</a></li>
@@ -217,63 +223,314 @@
 		</header>
 		<div class="main">
             <div class="container">
-				<ul class="breadcrumbs">
-					<li class="breadcrumbs__item"><a href="#">Главная</a></li>
-					<li class="breadcrumbs__item"><a href="#">Врачи</a></li>
-					<li class="breadcrumbs__item"><a href="#">О компании</a></li>
-				</ul>
-                <section class="about-company">
-                    <h1 class="about-company__title">
-                        О компании
-                    </h1>
-                    <div class="about-company__text">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est libero aperiam laudantium nostrum. Ex beatae cupiditate nesciunt at quaerat nihil, nulla quis reprehenderit obcaecati, dignissimos libero voluptatem commodi id suscipit.
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi, quibusdam, consectetur laborum sed ut in inventore quae rerum quos velit, recusandae at illum nam. Pariatur hic suscipit praesentium non consequatur!
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus minima quae ab? Laboriosam fugit voluptates sit quod recusandae, temporibus odio, natus adipisci saepe quasi quo ex itaque illum error dicta.
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum quo numquam quod perferendis rerum, praesentium fuga quis adipisci vitae ea provident sint consequatur laborum eveniet? Quasi pariatur debitis accusantium facere.
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quod placeat nemo laborum amet, sunt ut officia voluptates obcaecati repellat culpa et, omnis, in explicabo odio voluptas non. Atque, illum?
-                        </p>
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit quia rem odio, nobis earum sit culpa vel ut est eligendi atque facilis laboriosam aut quo adipisci libero similique possimus? Itaque.
-                        </p>
+            <ul class="breadcrumbs">
+                <li class="breadcrumbs__item"><a href="#">Главная</a></li>
+                <li class="breadcrumbs__item"><a href="#">Врачи</a></li>
+                <li class="breadcrumbs__item"><a href="#">Десятерик Марина Григорьевна</a></li>
+            </ul>
+            <section class="doctor-description">
+                <div class="doctor-description__main-information">
+                    <div class="doctor-description__main-information-picture">
+                        <img src="img/doctor-picture.jpg" alt="Десятерик Марина Григорьевна">
                     </div>
-                    <p class="about-company__video">
-                        <iframe src="https://www.youtube.com/embed/qDM89PbqJww" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </p>
-                </section>
-                <section id="registration-doctor-appointment" class="registration-doctor-appointment">
-                    <h2 class="registration-doctor-appointment__title h2">
-                        Запись на приём
-                    </h2>
-                    <form action="" method="POST">
-                        <div class="registration-doctor-appointment__current-city">
-                            <p style="font-weight: 700">Ваш город:</p>
-                            <p class="registration-doctor-appointment__city-name"></p>
-                            <select id="registration-doctor__select-office" name="registration-doctor__select-office">
-                                <option value="ст.Ессентукская">ст.Ессентукская</option>
-                                <option value="ст.Ессентукская2">ст.Ессентукская2</option>
-                                <option value="ст.Ессентукская3">ст.Ессентукская2</option>
-                            </select>
+                    <div class="doctor-description__main-information-text">
+                        <h2 class="doctor-description__doctor-name">
+                            Десятерик Марина Григорьевна
+                        </h2>
+                        <div class="doctor-description__specialization">
+                            <span>Врач:</span>
+                            <span>врач ультрозвуковой диагностики (УЗИ)</span>
+                            <span>Акушер-гинеколог</span>
                         </div>
-                        <div class="registration-doctor-appointment__form-group">
-                            <input type="text" placeholder="Имя" name="name">
-                            <input type="text" name="tel">
-                            <input class="btn primary-btn" type="submit" value="Записаться на приём">
-                        </div>
-                        <p class="registration-doctor-appointment__agree">
-                            Нажимая на кнопку, вы даёте согласие <a href="#">на обработку персональных данных.</a>
+                        <p class="doctor-description__experience">
+                            Стаж: 9 лет
                         </p>
-                        <div class="registration-doctor-appointment__kaptcha">
-                            <div id="html_element"></div>
-                        </div>
-                    </form>
-                </section>
-                <div class="pulsating-circle">
-                    <span class="pulsating-circle__text">Запись на приём</span>
+                        <p class="doctor-description__achievements">
+                            Преподавала на кафедре акушерства и гинекологии лечебного факультета РНИМУ
+                            им. Н.И Пирогова, автор 16 статей и 2-х патентов 
+                        </p>
+                        <a href="#" class="btn primary-btn">Записаться на прием</a>
+                    </div>
                 </div>
+                <ul class="doctor-description__tabs tabs-list">
+                    <li class="tabs-list__item active"><a href="#tab-content-1">Образование и опыт работы</a></li>
+                    <li class="tabs-list__item"><a href="#tab-content-2">Лечение</a></li>
+                    <li class="tabs-list__item"><a href="#tab-content-3">Расписание</a></li>
+                    <li class="tabs-list__item"><a href="#tab-content-4">Записаться на приём</a></li>
+                </ul>
+                <div class="doctor-description__tab-content">
+                    <div class="doctor-description__tab-content-education" id="tab-content-1">
+                        <ul class="doctor-description__tab-content-list">
+                            <li class="doctor-description__tab-content-list-item">
+                                <div class="doctor-description__tab-content-list-item-icon">
+                                     <svg class="icon icon-file"><use xlink:href="#icon-file"></use></svg>
+                                </div>
+                                <p class="doctor-description__tab-content-list-item-name">Сертификаты:</p>
+                                <div class="doctor-description__tab-content-list-item-text">
+                                    <span>2016-2021</span>
+                                    <span>Акушерство и гинекология, сертификат 01772</span>
+                                </div>
+                            </li>
+                            <li class="doctor-description__tab-content-list-item">
+                                <div class="doctor-description__tab-content-list-item-icon">
+                                    <svg class="icon icon-prescription"><use xlink:href="#icon-prescription"></use></svg>
+                                </div>
+                                <p class="doctor-description__tab-content-list-item-name">Опыт работы:</p>
+                                <div class="doctor-description__tab-content-list-item-text">
+                                    <span>2016-2021</span>
+                                    <span>Акушерство и гинекология, сертификат 01772</span>
+                                </div>
+                            </li>
+                            <li class="doctor-description__tab-content-list-item">
+                                <div class="doctor-description__tab-content-list-item-icon">
+                                    <svg class="icon icon-graduate-student"><use xlink:href="#icon-graduate-student"></use></svg>
+                                </div>
+                                <p class="doctor-description__tab-content-list-item-name">Образование:</p>
+                                <div class="doctor-description__tab-content-list-item-text">
+                                    <span>2016-2021</span>
+                                    <span>Акушерство и гинекология, сертификат 01772</span>
+                                </div>
+                            </li>
+                            <li class="doctor-description__tab-content-list-item">
+                                <div class="doctor-description__tab-content-list-item-icon">
+                                     <svg class="icon icon-book"><use xlink:href="#icon-book"></use></svg>
+                                </div>
+                                <p class="doctor-description__tab-content-list-item-name">Научные и практические интересы:</p>
+                                <div class="doctor-description__tab-content-list-item-text">
+                                    <span>2016-2021</span>
+                                    <span>Акушерство и гинекология, сертификат 01772</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="doctor-description__tab-content-education" id="tab-content-2">
+                        <ul class="doctor-description__tab-content-list">
+                            <li class="doctor-description__tab-content-list-item">
+                                <div class="doctor-description__tab-content-list-item-icon">
+                                    <svg class="icon icon-dna"><use xlink:href="#icon-dna"></use></svg>
+                                </div>
+                                <p class="doctor-description__tab-content-list-item-name">Лечение и диагностика заболеваний:</p>
+                                <div class="doctor-description__tab-content-list-item-text">
+                                    <span>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem aut ipsum quos quidem. Commodi voluptas, ipsam molestias architecto facere iste! Voluptatem fuga velit deleniti alias culpa, sed nobis neque eius.
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus sequi nemo eum ipsa cumque temporibus! Tempore nihil enim a cupiditate! Repellendus cumque laboriosam ducimus illo necessitatibus architecto impedit amet totam.
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa atque temporibus voluptates molestias error, distinctio nihil, ut tempora fugiat reprehenderit ipsam unde quas deleniti nulla modi quae magni accusamus quod.
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="doctor-description__tab-content-education" id="tab-content-3">
+                        <ul class="doctor-description__tab-content-list">
+                            <li class="doctor-description__tab-content-list-item">
+                                <div class="doctor-description__tab-content-list-item-icon">
+                                    <svg class="icon icon-calendar"><use xlink:href="#icon-calendar"></use></svg>
+                                </div>
+                                <p class="doctor-description__tab-content-list-item-name">Расписание:</p>
+                                <div class="doctor-description__tab-content-list-item-text">
+                                    <span>15 апреля - 22 апреля</span>
+                                </div>
+                                <div class="schedule-table">
+                                    <div class="schedule-table__row">
+                                        <div class="schedule-table__col">
+                                            <div class="schedule-table__col-head">
+                                                Пн 25.04
+                                            </div>
+                                            <div class="schedule-table__col-body">
+                                                <span timet="28.04.2019">
+                                                    9:00 – 18:00                                            
+                                                </span>
+                                                <span timet="28.04.2019">
+                                                    9:00 – 18:00                                            
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="schedule-table__col">
+                                            <div class="schedule-table__col-head">
+                                                 Вт 26.04
+                                            </div>
+                                            <div class="schedule-table__col-body">
+                                                <span timet="28.04.2019">
+                                                    9:00 – 18:00                                            
+                                                </span>
+                                                <span timet="28.04.2019">
+                                                    9:00 – 18:00                                            
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="schedule-table__col">
+                                            <div class="schedule-table__col-head">
+                                                Ср 27.04
+                                            </div>
+                                            <div class="schedule-table__col-body">
+                                                <span timet="28.04.2019">
+                                                    9:00 – 18:00                                            
+                                                </span>
+                                                <span timet="28.04.2019">
+                                                    9:00 – 18:00                                            
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="schedule-table__col">
+                                            <div class="schedule-table__col-head">
+                                                Чт 28.04
+                                            </div>
+                                            <div class="schedule-table__col-body">
+                                                <span timet="28.04.2019">
+                                                    9:00 – 18:00                                            
+                                                </span>
+                                                <span timet="28.04.2019">
+                                                    9:00 – 18:00                                            
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="schedule-table__col">
+                                            <div class="schedule-table__col-head">
+                                                Пт 29.04
+                                            </div>
+                                            <div class="schedule-table__col-body">
+                                                <span timet="28.04.2019">
+                                                    9:00 – 18:00                                            
+                                                </span>
+                                                <span timet="28.04.2019">
+                                                    9:00 – 18:00                                            
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="schedule-table__col">
+                                            <div class="schedule-table__col-head">
+                                                Сб 30.04
+                                            </div>
+                                            <div class="schedule-table__col-body">
+                                                <span timet="28.04.2019">
+                                                    9:00 – 18:00                                            
+                                                </span>
+                                                <span timet="28.04.2019">
+                                                    9:00 – 18:00                                            
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="schedule-table__row">
+                                        <div class="schedule-table__col">
+                                            <div class="schedule-table__col-head">
+                                                ПН 25.04
+                                            </div>
+                                            <div class="schedule-table__col-body">
+                                                <span timet="28.04.2019">
+                                                    9:00 – 18:00                                            
+                                                </span>
+                                                <span timet="28.04.2019">
+                                                    9:00 – 18:00                                            
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="schedule-table__col">
+                                            <div class="schedule-table__col-head">
+                                                 ВТ 26.04
+                                            </div>
+                                            <div class="schedule-table__col-body">
+                                                <span timet="28.04.2019">
+                                                    9:00 – 18:00                                            
+                                                </span>
+                                                <span timet="28.04.2019">
+                                                    9:00 – 18:00                                            
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="schedule-table__col">
+                                            <div class="schedule-table__col-head">
+                                                СР 27.04
+                                            </div>
+                                            <div class="schedule-table__col-body">
+                                                <span timet="28.04.2019">
+                                                    9:00 – 18:00                                            
+                                                </span>
+                                                <span timet="28.04.2019">
+                                                    9:00 – 18:00                                            
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="schedule-table__col">
+                                            <div class="schedule-table__col-head">
+                                                ЧТ 28.04
+                                            </div>
+                                            <div class="schedule-table__col-body">
+                                                <span timet="28.04.2019">
+                                                    9:00 – 18:00                                            
+                                                </span>
+                                                <span timet="28.04.2019">
+                                                    9:00 – 18:00                                            
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="schedule-table__col">
+                                            <div class="schedule-table__col-head">
+                                                ПТ 29.04
+                                            </div>
+                                            <div class="schedule-table__col-body">
+                                                <span timet="28.04.2019">
+                                                    9:00 – 18:00                                            
+                                                </span>
+                                                <span timet="28.04.2019">
+                                                    9:00 – 18:00                                            
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="schedule-table__col">
+                                            <div class="schedule-table__col-head">
+                                                СБ 30.04
+                                            </div>
+                                            <div class="schedule-table__col-body">
+                                                <span timet="28.04.2019">
+                                                    9:00 – 18:00                                            
+                                                </span>
+                                                <span timet="28.04.2019">
+                                                    9:00 – 18:00                                            
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="doctor-description__tab-content-education" id="tab-content-4">
+                        <section id="registration-doctor-appointment" class="registration-doctor-appointment">
+                            <h2 class="registration-doctor-appointment__title h2">
+                                Запись на приём
+                            </h2>
+                            <form action="" method="POST">
+                                <div class="registration-doctor-appointment__current-city">
+                                    <p style="font-weight: 700">Ваш город:</p>
+                                    <p class="registration-doctor-appointment__city-name"></p>
+                                    <select id="registration-doctor__select-office" name="registration-doctor__select-office">
+                                        <option value="ст.Ессентукская">ст.Ессентукская</option>
+                                        <option value="ст.Ессентукская2">ст.Ессентукская2</option>
+                                        <option value="ст.Ессентукская3">ст.Ессентукская2</option>
+                                    </select>
+                                </div>
+                                <div class="registration-doctor-appointment__form-group">
+                                    <input type="text" placeholder="Имя" name="name">
+                                    <input type="text" name="tel">
+                                    <input class="btn primary-btn" type="submit" value="Записаться на приём">
+                                </div>
+                                <p class="registration-doctor-appointment__agree">
+                                    Нажимая на кнопку, вы даёте согласие <a href="#">на обработку персональных данных.</a>
+                                </p>
+                                <div class="registration-doctor-appointment__kaptcha">
+                                    <div id="html_element"></div>
+                                </div>
+                            </form>
+                        </section>
+                    </div>
+                </div>
+            
+            </section>
+            
+            <div class="pulsating-circle">
+                <span class="pulsating-circle__text">Запись на приём</span>
+            </div>
             </div>
         </div>
 		<footer class="footer">
@@ -311,12 +568,5 @@
 		</footer>
 		<script src="./js/main.js" defer></script>
 		<script src="./js/svgxuse.js" defer></script>
-		<script type="text/javascript">
-			var onloadCallback = function() {
-			  grecaptcha.render('html_element', {
-				'sitekey' : '6LcApqAUAAAAAGhd3e4VAAI58MLIVAjKPJmnDMti'
-			  });
-			};
-		</script>
 	</body>
 </html>
