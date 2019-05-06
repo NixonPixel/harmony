@@ -1486,7 +1486,7 @@ html {
 
 .schedule-table__row {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 10px;
   flex-wrap: wrap;
   margin-right: -2.5px;
@@ -1509,8 +1509,10 @@ html {
   align-items: center;
   font-weight: 600; }
 
+.schedule__wrapper {
+  margin-top: 25px; }
+
 .schedule-table__col-body {
-  border: 2px solid #eeeeee;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1526,6 +1528,38 @@ html {
     transition: all .3s ease-in; }
     .schedule-table__col-body span:hover {
       color: #68ab4c; }
+
+.schedule__table-head {
+  background: #eee;
+  height: 40px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 0;
+  margin-right: 0;
+  align-items: center; }
+  .schedule__table-head .schedule-table__col {
+    border: none;
+    font-weight: 600;
+    text-align: center;
+    margin: 0; }
+
+.schedule-table--full .schedule-table__col {
+  max-width: 154px; }
+
+.schedule-table--full .schedule__table-head .schedule-table__col {
+  max-width: 154px; }
+
+.schedule-table--full .doctors__list-item-position {
+  font-size: 14px;
+  color: #68ab4c;
+  text-align: center; }
+
+.schedule-table--full .doctors__list-item-name {
+  text-align: center; }
+  .schedule-table--full .doctors__list-item-name a {
+    color: #68ab4c;
+    font-size: 14px;
+    text-decoration: none; }
 
 .pulsating-circle {
   position: fixed;
