@@ -687,11 +687,15 @@ html {
   border-bottom: 2px solid #c9c8c6; }
 
 .header__company-tel-number a {
-  color: #65ad49;
+  color: #ef9f40;
   font-size: 1.125em;
   text-decoration: none;
   font-weight: 600;
   white-space: nowrap; }
+  .header__company-tel-number a svg {
+    width: 1.2em;
+    height: 1.2em;
+    vertical-align: middle; }
 
 .header__bot {
   padding-top: 22px;
@@ -767,6 +771,11 @@ html {
     .main-nav__item a:hover {
       color: #66ac4c; }
 
+#current-location {
+  border-bottom: 2px dotted #ef9f40;
+  margin-left: 5px;
+  color: #68ab4c; }
+
 .office-location {
   border-bottom: 2px solid #c9c8c6; }
   .office-location .container {
@@ -789,8 +798,11 @@ html {
     border: none;
     outline: none; }
 
-.office-location-select-option input {
-  opacity: 0; }
+.office-location-select-option {
+  position: relative; }
+  .office-location-select-option input {
+    opacity: 0;
+    position: absolute; }
 
 .office-location-select-current-option input {
   border: none;
@@ -872,7 +884,7 @@ html {
     display: none; }
   .search input[type="search"] {
     border-radius: 12px;
-    border: 1px solid #a4a19c;
+    border: 2px solid #68ab4c;
     padding-top: 4px;
     padding-bottom: 5px;
     outline: none;
@@ -883,7 +895,7 @@ html {
       padding-left: 10px;
       font-size: 0.825em;
       text-transform: uppercase;
-      color: #7b7b7b;
+      color: #68ab4c;
       font-weight: 300; }
   .search .icon-search-icon {
     position: absolute;
@@ -1310,7 +1322,7 @@ html {
   font-size: 1.5em;
   text-align: center;
   opacity: 1;
-  margin-bottom: 50px; }
+  margin-bottom: 25px; }
 
 .btn {
   padding-top: 16px;
@@ -1798,12 +1810,6 @@ html {
 .about-company__text {
   line-height: 1.5em; }
 
-.about-company__title {
-  color: #5b5c5e;
-  font-size: 1.75em;
-  text-align: center;
-  font-weight: 600; }
-
 .about-company__video iframe {
   width: 100%;
   max-width: 560px;
@@ -1908,7 +1914,11 @@ select {
   margin: 15px 0 10px; }
 
 .contacts {
-  padding-bottom: 150px; }
+  padding-bottom: 30px; }
+  .contacts ymaps {
+    color: #68ab4c; }
+    .contacts ymaps a {
+      color: #68ab4c; }
 
 .services__wrapper {
   display: flex;
@@ -2096,30 +2106,38 @@ select {
   padding: 0;
   border-radius: 6px; }
 
-@media screen and (min-width: 576px) {
+.scroll-to-top {
+  background-color: #ef9f40;
+  border-radius: 50%;
+  position: fixed;
+  right: 78px;
+  top: 90%;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 45px;
+  height: 45px;
+  display: none; }
+  .scroll-to-top svg {
+    color: #fff; }
+  @media screen and (min-width: 576px) {
     .container {
       max-width: 510px; } }
-
-@media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     .container {
       max-width: 690px; } }
-
-@media screen and (min-width: 992px) {
+  @media screen and (min-width: 992px) {
     .container {
       max-width: 930px; } }
-
-@media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     .container {
       max-width: 1110px; } }
-
-@media (max-width: 992px) {
+  @media (max-width: 992px) {
   .header__company-tel-number {
     margin: 0 auto; }
   .search {
     margin-right: 15px;
     margin-left: 30px; } }
-
-@media (max-width: 960px) {
+  @media (max-width: 960px) {
   .services-description__tabs {
     max-width: 100%; }
   .services-description__ask-heading {
@@ -2142,8 +2160,7 @@ select {
     flex-direction: column; }
     .services-description__ask-icon-and-text svg {
       margin: 0; } }
-
-@media (max-width: 767px) {
+  @media (max-width: 767px) {
   .addresses-and-schedules {
     display: none; }
   .header {
@@ -2283,8 +2300,7 @@ select {
     .services__category-list li {
       margin: 0 auto;
       margin-bottom: 10px; } }
-
-@media (max-width: 460px) {
+  @media (max-width: 460px) {
   .header__top .container {
     flex-direction: column;
     align-items: flex-start; }
