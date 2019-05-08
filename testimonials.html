@@ -104,6 +104,14 @@
 		  <title>question-circle-o</title>
 		  <path d="M13.75 18.75v2.5c0 0.281-0.219 0.5-0.5 0.5h-2.5c-0.281 0-0.5-0.219-0.5-0.5v-2.5c0-0.281 0.219-0.5 0.5-0.5h2.5c0.281 0 0.5 0.219 0.5 0.5zM17.75 11c0 2.219-1.547 3.094-2.688 3.734-0.812 0.469-1.313 0.766-1.313 1.266v0.5c0 0.281-0.219 0.5-0.5 0.5h-2.5c-0.281 0-0.5-0.219-0.5-0.5v-1.062c0-1.922 1.375-2.531 2.484-3.031 0.938-0.438 1.516-0.734 1.516-1.437 0-0.906-1.141-1.578-2.172-1.578-0.547 0-1.125 0.172-1.484 0.422-0.344 0.234-0.672 0.578-1.25 1.297-0.094 0.125-0.234 0.187-0.391 0.187-0.109 0-0.219-0.031-0.297-0.094l-1.687-1.281c-0.203-0.156-0.25-0.453-0.109-0.672 1.281-2.016 3.078-3 5.453-3v0c2.562 0 5.437 2.031 5.437 4.75zM12 4c-5.516 0-10 4.484-10 10s4.484 10 10 10 10-4.484 10-10-4.484-10-10-10zM24 14c0 6.625-5.375 12-12 12s-12-5.375-12-12 5.375-12 12-12v0c6.625 0 12 5.375 12 12z"></path>
 		</symbol>
+		<symbol id="icon-phone" viewBox="0 0 32 32">
+		    <title>phone</title>
+		    <path d="M22 20c-2 2-2 4-4 4s-4-2-6-4-4-4-4-6 2-2 4-4-4-8-6-8-6 6-6 6c0 4 4.109 12.109 8 16s12 8 16 8c0 0 6-4 6-6s-6-8-8-6z"></path>
+		</symbol>
+		<symbol id="icon-arrow-up2" viewBox="0 0 32 32">
+		    <title>arrow-up2</title>
+		    <path d="M27.414 12.586l-10-10c-0.781-0.781-2.047-0.781-2.828 0l-10 10c-0.781 0.781-0.781 2.047 0 2.828s2.047 0.781 2.828 0l6.586-6.586v19.172c0 1.105 0.895 2 2 2s2-0.895 2-2v-19.172l6.586 6.586c0.39 0.39 0.902 0.586 1.414 0.586s1.024-0.195 1.414-0.586c0.781-0.781 0.781-2.047 0-2.828z"></path>
+		</symbol>
 		  </defs>
 		  </svg>
 		<header class="header">
@@ -111,11 +119,9 @@
 		        <div class="container">
 		            <div class="office-location__select-block">
 		            <p>Ваш город:</p>
-		                <form class="office-location__select-block-form" method="GET"></form>
+		                <form class="office-location__select-block-form" method="POST"></form>
 		                    <div class="office-location-select">
-		                        <label class="office-location-select-current-option" for="current-option">
-		                            <input value="ст.Ессентукская" id="current-location" type="text" name="current-option">
-		                        </label>
+		                        <p id="current-location" type="text" name="current-option">ст.Ессентукская</p>
 		                        <div class="office-location-select-options">
 		                            <label class="office-location-select-option">
 		                                 ст.Ессентукская1
@@ -169,6 +175,7 @@
 		            </div>
 		            <div class="header__company-tel-number">
 		                <a href="tel:+79283483344">
+		                    <svg class="icon icon-phone"><use xlink:href="#icon-phone"></use></svg>
 		                    +7 (928) 348 33 44
 		                </a>
 		            </div>
@@ -216,6 +223,11 @@
 		</header>
 		<div class="main">
             <div class="container">
+			<ul class="breadcrumbs">
+			    <li class="breadcrumbs__item"><a href="#">Главная</a></li>
+			    <li class="breadcrumbs__item"><a href="#">Врачи</a></li>
+			    <li class="breadcrumbs__item"><a href="#">Десятерик Марина Григорьевна</a></li>
+			</ul>
 			<section class="testimonials">
 			    <h1 class="page-title">Отзывы</h1>
 			    <div class="doctors__filter">
@@ -349,9 +361,12 @@
 			        </div>
 			    </div>
 			</section>
-            <div class="pulsating-circle">
-                <span class="pulsating-circle__text">Запись на приём</span>
-            </div>
+			<div class="pulsating-circle">
+			    <span class="pulsating-circle__text">Запись на приём</span>
+			</div>
+			<div class="scroll-to-top">
+			    <svg class="icon icon-arrow-up2"><use xlink:href="#icon-arrow-up2"></use></svg>
+			</div>
             </div>
         </div>
 		<footer class="footer">
