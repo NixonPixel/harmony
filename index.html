@@ -218,7 +218,7 @@
 		                    <li class="main-nav__item"><a href="/schedule.html">Расписание</a></li>
 		                    <li class="main-nav__item"><a href="#">Цены</a></li>
 		                    <li class="main-nav__item"><a href="/actions.html">Акции</a></li>
-		                    <li class="main-nav__item"><a href="#">Пациентам</a></li>
+		                    <li class="main-nav__item"><a href="/patient-information.html">Пациентам</a></li>
 		                    <li class="main-nav__item"><a href="/testimonials.html">Отзывы</a></li>
 		                    <li class="main-nav__item"><a href="/contacts.html">Контакты</a></li>
 		                </ul>
@@ -395,6 +395,62 @@
 				<div class="scroll-to-top">
 				    <svg class="icon icon-arrow-up2"><use xlink:href="#icon-arrow-up2"></use></svg>
 				</div>
+				<div class="doctor-apointment-popup">
+				    <div class="logo">
+				        <a class="logo__link" href="index.html">
+				            <img class="logo__img" src="img/logo.png" alt="Логотип МЦ Гармония">
+				            <div class="logo__text">
+				                <p class="logo__company-name">
+				                    Гармония
+				                </p>
+				                <p class="logo__company-desck">
+				                    медецинский центр
+				                </p>
+				            </div>
+				        </a>
+				    </div>
+				    <h3 class="doctor-apointment-popup__title">
+				        Оставте свой номер и мы вам перезвоним
+				    </h3>
+				    <form action="" class="doctor-apointment-popup__form" name="doctor-apointment">
+				        <div class="form__group">
+				            <input class="primary-input" type="tel" placeholder="" name="doctor-apointment__tel">
+				        </div>
+				        <div class="form__group doctor-apointment__choise-time">
+				            <label class="doctor-apointment__choise-time-label on">
+				                Сейчас
+				                <input type="radio" name="when-to-call" value="right-now">
+				            </label>
+				            <label class="doctor-apointment__choise-time-label doctor-apointment__choise-time-label--wait-until">
+				                Точное время
+				                <input type="radio" name="when-to-call" value="wait-until">
+				            </label>
+				            <div class="wait-until__select-time">
+				                <div class="wait-until__select-time-hours">
+				                    <button data-hourse="true" class="wait-until__select-arrow wait-until__select-arrow-up"></button>
+				                    <button data-hourse="true" class="wait-until__select-arrow wait-until__select-arrow-down"></button>
+				                </div>
+				                <span class="wait-until__select-time-counter">
+				                    12:00
+				                </span>
+				                <div class="wait-until__select-time-minutes">
+				                    <button data-minutes="true" class="wait-until__select-arrow wait-until__select-arrow-up"></button>
+				                    <button data-minutes="true" class="wait-until__select-arrow wait-until__select-arrow-down"></button>
+				                </div>
+				            </div>
+				        </div>
+				        <div class="form__group">
+				            <a href="#" class="btn primary-btn">
+				                <svg class="icon icon-phone"><use xlink:href="#icon-phone"></use></svg>
+				                Жду звонка
+				            </a>
+				        </div>
+				    </form>
+				    <button class="close-btn">
+				        <svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg>
+				    </button>
+				</div>
+				<div class="overlay"></div>
 			</div>
 		</main>
 		<footer class="footer">

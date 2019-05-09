@@ -2239,6 +2239,70 @@ select {
   z-index: 200;
   opacity: 0.7; }
 
+.patient-information .doctors__filter-item {
+  margin-left: 0; }
+
+.patient-information__list {
+  list-style: none;
+  padding-bottom: 50px; }
+
+.patient-information__item.open::after {
+  transform: rotate(180deg); }
+
+.patient-information__item.open .patient-information__item-body {
+  transform: scale(1);
+  position: relative;
+  opacity: 1; }
+
+.patient-information__item {
+  border: 2px solid #68ab4c;
+  color: #2a2a28;
+  margin-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 8px;
+  padding-bottom: 11px;
+  position: relative;
+  border-radius: 6px; }
+  .patient-information__item::after {
+    content: "";
+    display: block;
+    position: absolute;
+    transition: all 0.3s ease-in;
+    right: 20px;
+    top: 20px;
+    margin-top: -5px;
+    border: 10px solid transparent;
+    border-top: 10px solid #68ab4c; }
+  .patient-information__item:nth-child(2n) {
+    border: 2px solid #ef9f40; }
+    .patient-information__item:nth-child(2n)::after {
+      border: 10px solid transparent;
+      border-top: 10px solid #ef9f40; }
+
+.patient-information__item-head {
+  font-weight: 600;
+  font-size: 1.35em; }
+
+.patient-information__item-body {
+  line-height: 1.3em;
+  font-size: 1em;
+  padding-top: 15px; }
+
+.patient-information__item-body-title {
+  font-weight: 600;
+  font-size: 18px;
+  margin-top: 5px;
+  margin-bottom: 5px; }
+
+.patient-information__item-body {
+  opacity: 0;
+  transform: scale(0);
+  position: absolute;
+  transition: all 0.3s ease-in;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+
 @media screen and (min-width: 576px) {
     .container {
       max-width: 510px; } }
@@ -2425,7 +2489,12 @@ select {
     margin-bottom: 25px; }
     .services__category-list li {
       margin: 0 auto;
-      margin-bottom: 10px; } }
+      margin-bottom: 10px; }
+  .patient-information__item-head {
+    font-size: 1em;
+    padding-right: 20px; }
+  .patient-information__item-body-title {
+    font-size: 1em; } }
 
 @media (max-width: 460px) {
   .header__top .container {
