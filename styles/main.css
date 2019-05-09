@@ -1349,6 +1349,17 @@ html {
   background-color: #ef7f1b;
   color: #fff; }
 
+.close-btn {
+  background: transparent;
+  border: none;
+  position: absolute;
+  top: 10px;
+  right: 10px; }
+  .close-btn svg {
+    width: 1.2em;
+    height: 1.2em;
+    color: #ef9f40; }
+
 .icon {
   width: 1.5em;
   height: 1.5em; }
@@ -2119,25 +2130,139 @@ select {
   display: none; }
   .scroll-to-top svg {
     color: #fff; }
-  @media screen and (min-width: 576px) {
+
+.doctor-apointment-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  background: #fff;
+  margin-left: -150px;
+  margin-top: -200px;
+  padding: 20px;
+  display: none;
+  z-index: 300;
+  border-radius: 6px; }
+  .doctor-apointment-popup .btn {
+    width: 100%;
+    display: block;
+    padding-top: 10px; }
+  .doctor-apointment-popup .form__group {
+    margin-bottom: 25px; }
+
+.doctor-apointment-popup.show {
+  display: block; }
+
+.doctor-apointment-popup__title {
+  color: #2a2a28;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 600;
+  margin-bottom: 20px;
+  margin-top: 10px; }
+
+.doctor-apointment__choise-time {
+  font-size: 0.825em;
+  font-weight: 600; }
+  .doctor-apointment__choise-time label {
+    position: relative; }
+    .doctor-apointment__choise-time label::after {
+      content: '';
+      display: inline-block;
+      width: 14px;
+      margin-left: 5px;
+      margin-right: 10px;
+      height: 14px;
+      vertical-align: middle;
+      border-radius: 50%;
+      border: 2px solid #ef9f40;
+      box-sizing: border-box; }
+  .doctor-apointment__choise-time label.on::after {
+    background: #68ab4c; }
+  .doctor-apointment__choise-time input {
+    opacity: 0;
+    position: absolute; }
+
+.wait-until__select-time {
+  border: 1px solid #2a2a28;
+  max-width: 140px;
+  justify-content: space-between;
+  align-items: center;
+  display: none; }
+  .wait-until__select-time.show {
+    display: flex; }
+  .wait-until__select-time button {
+    background: transparent;
+    border: none;
+    display: block;
+    position: relative;
+    width: 25px;
+    height: 25px; }
+    .wait-until__select-time button::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      transform: rotate(45deg);
+      left: 50%;
+      margin-left: -4px;
+      border-top: 2px solid #2a2a28;
+      border-left: 2px solid #2a2a28;
+      top: 7px; }
+    .wait-until__select-time button:last-child::before {
+      transform: rotate(-135deg);
+      top: unset;
+      bottom: 7px; }
+  .wait-until__select-time .wait-until__select-time-minutes button::before {
+    margin-left: 0;
+    left: 3px; }
+
+.wait-until__select-time-counter {
+  font-size: 1.35em;
+  font-weight: bold; }
+
+.wait-until__select-time {
+  margin: 0 auto;
+  margin-top: 20px; }
+
+.doctor-apointment__choise-time {
+  text-align: center; }
+
+.overlay.on {
+  position: fixed;
+  background: #000;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  opacity: 0.7; }
+
+@media screen and (min-width: 576px) {
     .container {
       max-width: 510px; } }
-  @media screen and (min-width: 768px) {
+
+@media screen and (min-width: 768px) {
     .container {
       max-width: 690px; } }
-  @media screen and (min-width: 992px) {
+
+@media screen and (min-width: 992px) {
     .container {
       max-width: 930px; } }
-  @media screen and (min-width: 1200px) {
+
+@media screen and (min-width: 1200px) {
     .container {
       max-width: 1110px; } }
-  @media (max-width: 992px) {
+
+@media (max-width: 992px) {
   .header__company-tel-number {
     margin: 0 auto; }
   .search {
     margin-right: 15px;
     margin-left: 30px; } }
-  @media (max-width: 960px) {
+
+@media (max-width: 960px) {
   .services-description__tabs {
     max-width: 100%; }
   .services-description__ask-heading {
@@ -2160,7 +2285,8 @@ select {
     flex-direction: column; }
     .services-description__ask-icon-and-text svg {
       margin: 0; } }
-  @media (max-width: 767px) {
+
+@media (max-width: 767px) {
   .addresses-and-schedules {
     display: none; }
   .header {
@@ -2300,7 +2426,8 @@ select {
     .services__category-list li {
       margin: 0 auto;
       margin-bottom: 10px; } }
-  @media (max-width: 460px) {
+
+@media (max-width: 460px) {
   .header__top .container {
     flex-direction: column;
     align-items: flex-start; }
