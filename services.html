@@ -215,9 +215,20 @@
 		                    <li class="main-nav__item"><a href="/doctors.html">Врачи</a></li>
 		                    <li class="main-nav__item"><a href="/services.html">Услуги</a></li>
 		                    <li class="main-nav__item"><a href="/schedule.html">Расписание</a></li>
-		                    <li class="main-nav__item"><a href="#">Цены</a></li>
+		                    <li class="main-nav__item main-nav__item--dropdown"><a href="#">Цены</a>
+		                        <ul class="main-nav__item__dropdown-list">
+		                            <li><a href="#">Прайс лист</a></li>
+		                            <li><a href="#">Программы</a></li>
+		                            <li><a href="#">Диагностика</a></li>    
+		                        </ul>
+		                    </li>
 		                    <li class="main-nav__item"><a href="/actions.html">Акции</a></li>
-		                    <li class="main-nav__item"><a href="/patient-information.html">Пациентам</a></li>
+		                    <li class="main-nav__item main-nav__item--dropdown">
+		                        <a href="/patient-information.html">Пациентам</a>
+		                        <ul class="main-nav__item__dropdown-list">
+		                            <li><a href="/patient-information.html">Подготовка к иследования</a></li>  
+		                        </ul>
+		                    </li>
 		                    <li class="main-nav__item"><a href="/testimonials.html">Отзывы</a></li>
 		                    <li class="main-nav__item"><a href="/contacts.html">Контакты</a></li>
 		                </ul>
@@ -565,36 +576,37 @@
 			</div>
     </div>
 		<footer class="footer">
-		    <div class="container">
-		        <div class="footer__top">
+		    <div class="footer__top">
+		        <div class="container">
 		            <p class="footer__text">У вас есть вопросы?</p>
 		            <p class="footer__text">Просто позвоните нам</p>
 		            <a class="footer__company-number" href="tel:+79283483344">+7 (928) 348 33 44</a>
 		        </div>
-		        <div class="footer__bot">
-		            <ul class="social-list">
-		                <li class="social-list__item">
-		                    <a href="#">
-		                        <svg class="icon icon-vk"><use xlink:href="#icon-vk"></use></svg>
-		                    </a>
-		                </li>
-		                <li class="social-list__item">
-		                    <a href="#">
-		                        <svg class="icon icon-fb "><use xlink:href="#icon-facebook2"></use></svg>
-		                    </a>
-		                </li>
-		                <!-- <li class="social-list__item">
-		                    <a href="#">
-		                        <svg class="icon icon-yt"><use xlink:href="#icon-youtube"></use></svg>
-		                    </a>
-		                </li> -->
-		                <li class="social-list__item">
-		                    <a href="#">
-		                        <svg class="icon icon-ok"><use xlink:href="#icon-ok"></use></svg>
-		                    </a>
-		                </li>
-		            </ul>
-		        </div>
+		    </div>
+		    <div class="footer__bot container">
+		        <p style="font-weight: 600;color: #2a2a28;margin: 0;margin-right: 20px;display: inline-block; margin-top: 10px;">Мы в соц.сетях: </p>
+		        <ul class="social-list">
+		            <li class="social-list__item">
+		                <a href="#">
+		                    <svg class="icon icon-vk"><use xlink:href="#icon-vk"></use></svg>
+		                </a>
+		            </li>
+		            <li class="social-list__item">
+		                <a href="#">
+		                    <svg class="icon icon-fb "><use xlink:href="#icon-facebook2"></use></svg>
+		                </a>
+		            </li>
+		            <!-- <li class="social-list__item">
+		                <a href="#">
+		                    <svg class="icon icon-yt"><use xlink:href="#icon-youtube"></use></svg>
+		                </a>
+		            </li> -->
+		            <li class="social-list__item">
+		                <a href="#">
+		                    <svg class="icon icon-ok"><use xlink:href="#icon-ok"></use></svg>
+		                </a>
+		            </li>
+		        </ul>
 		    </div>
 		</footer>
 		<script src="./js/main.js" defer></script>
