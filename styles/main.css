@@ -718,31 +718,30 @@ html {
   padding-bottom: 15px;
   padding-top: 10px; }
   .footer__top {
-    display: flex;
-    align-items: baseline;
-    justify-content: center;
+    border-bottom: 2px solid #c9c8c6;
     font-weight: 600;
-    margin: 0 auto;
     flex-wrap: wrap;
-    margin-right: -25px;
-    margin-left: -25px; }
+    padding-top: 10px;
+    padding-bottom: 10px; }
+    .footer__top .container {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between; }
   .footer .footer__text {
     margin: 0;
-    margin-bottom: 20px;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     font-size: 1.5em; }
-  .footer .footer__company-number {
-    margin-left: 25px;
-    margin-right: 25px; }
   .footer__company-number {
     color: #68ab4c;
-    margin-bottom: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
     font-size: 1.5em;
     text-decoration: none; }
   .footer__bot {
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    padding-top: 15px; }
 
 .main {
   background-color: #f7f7f7;
@@ -770,6 +769,37 @@ html {
     line-height: 1.250em; }
     .main-nav__item a:hover {
       color: #66ac4c; }
+
+.main-nav__item--dropdown {
+  position: relative; }
+
+.main-nav__item--dropdown.open .main-nav__item__dropdown-list {
+  display: block; }
+
+.main-nav__item__dropdown-list {
+  position: absolute;
+  padding-top: 10px;
+  display: none;
+  list-style: none;
+  z-index: 300;
+  min-width: 250px; }
+  .main-nav__item__dropdown-list li {
+    background: #68ab4c;
+    color: #fff;
+    font-size: 1em;
+    white-space: nowrap;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+    transition: all 0.3s ease-in; }
+    .main-nav__item__dropdown-list li:hover {
+      background: #68b54c; }
+    .main-nav__item__dropdown-list li a {
+      color: inherit;
+      font-weight: 400; }
+      .main-nav__item__dropdown-list li a:hover {
+        color: #fff; }
 
 #current-location {
   border-bottom: 2px dotted #ef9f40;
@@ -2003,7 +2033,8 @@ select {
 
 .testimonials__wrapper {
   display: flex;
-  padding-top: 25px; }
+  padding-top: 25px;
+  padding-bottom: 70px; }
 
 .testimonials__item {
   display: flex;
@@ -2046,7 +2077,8 @@ select {
       margin: 0;
       margin-bottom: 5px; }
   .testimonials__write-testimonial .btn {
-    width: 100%; }
+    width: 100%;
+    margin: 0 auto; }
 
 .testimonials__item-image {
   min-width: 250px;
@@ -2065,17 +2097,15 @@ select {
 
 .testimonials__item-author {
   position: relative;
-  padding-left: 16px; }
+  display: flex;
+  align-items: center; }
   .testimonials__item-author::before {
     content: "";
+    margin-right: 10px;
     display: block;
-    position: absolute;
     transform: rotate(-135deg);
     width: 8px;
-    left: 0;
     height: 8px;
-    top: 50%;
-    margin-top: -6px;
     border-bottom: 2px solid #68ab4c;
     border-left: 2px solid #68ab4c; }
 
@@ -2239,12 +2269,22 @@ select {
   z-index: 200;
   opacity: 0.7; }
 
-.patient-information .doctors__filter-item {
-  margin-left: 0; }
+.patient-information {
+  padding-bottom: 90px; }
+  .patient-information .doctors__filter-item {
+    margin-left: 0; }
+
+.patient-information__wrapper {
+  padding-top: 30px;
+  background: #fff;
+  margin-left: -15px;
+  margin-right: -15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 30px; }
 
 .patient-information__list {
-  list-style: none;
-  padding-bottom: 50px; }
+  list-style: none; }
 
 .patient-information__item.open::after {
   transform: rotate(180deg); }
@@ -2255,7 +2295,6 @@ select {
   opacity: 1; }
 
 .patient-information__item {
-  border: 2px solid #68ab4c;
   color: #2a2a28;
   margin-top: 20px;
   padding-left: 20px;
@@ -2263,29 +2302,38 @@ select {
   padding-top: 8px;
   padding-bottom: 11px;
   position: relative;
-  border-radius: 6px; }
+  border-radius: 8px; }
+  .patient-information__item .patient-information__item-head {
+    width: auto;
+    border-bottom: 2px dotted #68ab4c;
+    display: flex;
+    align-items: center; }
+    .patient-information__item .patient-information__item-head img {
+      width: 30px;
+      height: 51px;
+      margin-right: 20px; }
   .patient-information__item::after {
     content: "";
     display: block;
     position: absolute;
     transition: all 0.3s ease-in;
     right: 20px;
-    top: 20px;
+    top: 30px;
     margin-top: -5px;
     border: 10px solid transparent;
     border-top: 10px solid #68ab4c; }
-  .patient-information__item:nth-child(2n) {
-    border: 2px solid #ef9f40; }
-    .patient-information__item:nth-child(2n)::after {
-      border: 10px solid transparent;
-      border-top: 10px solid #ef9f40; }
+  .patient-information__item:nth-child(2n) .patient-information__item-head {
+    border-bottom: 2px dotted #ef9f40; }
+  .patient-information__item:nth-child(2n)::after {
+    border: 10px solid transparent;
+    border-top: 10px solid #ef9f40; }
 
 .patient-information__item-head {
   font-weight: 600;
   font-size: 1.35em; }
 
 .patient-information__item-body {
-  line-height: 1.3em;
+  line-height: 1.5em;
   font-size: 1em;
   padding-top: 15px; }
 
@@ -2325,6 +2373,20 @@ select {
   .search {
     margin-right: 15px;
     margin-left: 30px; } }
+
+@media (max-width: 991px) {
+  .footer .footer__company-number,
+  .footer .footer__text {
+    font-size: 1em; }
+  .testimonials__wrapper {
+    flex-direction: column; }
+  .testimonials__content {
+    width: 100%; }
+  .testimonials__right-bar {
+    width: 100%;
+    margin-left: 0; }
+  .testimonials__wrapper {
+    padding-bottom: 30px; } }
 
 @media (max-width: 960px) {
   .services-description__tabs {
@@ -2390,17 +2452,21 @@ select {
         margin-bottom: 20px; }
   .header__company-tel-number {
     font-size: 0.875em; }
-  .footer__company-number {
-    font-size: 1em; }
-  .footer__top {
-    margin-right: 0;
-    margin-left: 0; }
+  .footer__top .container {
+    flex-direction: column;
+    align-items: center; }
   .footer .footer__text {
-    margin-left: 25px;
-    margin-right: 25px; }
+    margin-right: 0;
+    margin-left: 0;
+    white-space: nowrap;
+    margin-bottom: 0; }
   .footer .footer__company-number {
     margin-left: 0;
-    margin-right: 0; }
+    margin-right: 0;
+    white-space: nowrap;
+    font-size: 1em;
+    margin-bottom: 0;
+    margin-top: 10px; }
   .office-location__select-block {
     font-size: 0.875em; }
   .logo__company-name {
@@ -2490,6 +2556,19 @@ select {
     .services__category-list li {
       margin: 0 auto;
       margin-bottom: 10px; }
+  .testimonials__item {
+    flex-direction: column;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px; }
+  .testimonials__item-image {
+    display: flex;
+    justify-content: center; }
+  .testimonials__item-text-content {
+    margin-left: 0;
+    text-align: center; }
+  .testimonials__item-author {
+    justify-content: center; }
   .patient-information__item-head {
     font-size: 1em;
     padding-right: 20px; }
