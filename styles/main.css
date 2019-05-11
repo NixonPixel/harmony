@@ -2330,7 +2330,8 @@ select {
 
 .patient-information__item-head {
   font-weight: 600;
-  font-size: 1.35em; }
+  font-size: 1em;
+  text-transform: uppercase; }
 
 .patient-information__item-body {
   line-height: 1.5em;
