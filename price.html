@@ -19,7 +19,7 @@
 		<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
 		    async defer>
 		</script>
-		<link rel="stylesheet" href="./styles/main.css">
+		<link rel="stylesheet" href="./styles/main.min.css">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic" rel="stylesheet">
 		
 	</head>
@@ -105,6 +105,18 @@
 		  <title>question-circle-o</title>
 		  <path d="M13.75 18.75v2.5c0 0.281-0.219 0.5-0.5 0.5h-2.5c-0.281 0-0.5-0.219-0.5-0.5v-2.5c0-0.281 0.219-0.5 0.5-0.5h2.5c0.281 0 0.5 0.219 0.5 0.5zM17.75 11c0 2.219-1.547 3.094-2.688 3.734-0.812 0.469-1.313 0.766-1.313 1.266v0.5c0 0.281-0.219 0.5-0.5 0.5h-2.5c-0.281 0-0.5-0.219-0.5-0.5v-1.062c0-1.922 1.375-2.531 2.484-3.031 0.938-0.438 1.516-0.734 1.516-1.437 0-0.906-1.141-1.578-2.172-1.578-0.547 0-1.125 0.172-1.484 0.422-0.344 0.234-0.672 0.578-1.25 1.297-0.094 0.125-0.234 0.187-0.391 0.187-0.109 0-0.219-0.031-0.297-0.094l-1.687-1.281c-0.203-0.156-0.25-0.453-0.109-0.672 1.281-2.016 3.078-3 5.453-3v0c2.562 0 5.437 2.031 5.437 4.75zM12 4c-5.516 0-10 4.484-10 10s4.484 10 10 10 10-4.484 10-10-4.484-10-10-10zM24 14c0 6.625-5.375 12-12 12s-12-5.375-12-12 5.375-12 12-12v0c6.625 0 12 5.375 12 12z"></path>
 		</symbol>
+		<symbol id="icon-phone" viewBox="0 0 32 32">
+		    <title>phone</title>
+		    <path d="M22 20c-2 2-2 4-4 4s-4-2-6-4-4-4-4-6 2-2 4-4-4-8-6-8-6 6-6 6c0 4 4.109 12.109 8 16s12 8 16 8c0 0 6-4 6-6s-6-8-8-6z"></path>
+		</symbol>
+		<symbol id="icon-arrow-up2" viewBox="0 0 32 32">
+		    <title>arrow-up2</title>
+		    <path d="M27.414 12.586l-10-10c-0.781-0.781-2.047-0.781-2.828 0l-10 10c-0.781 0.781-0.781 2.047 0 2.828s2.047 0.781 2.828 0l6.586-6.586v19.172c0 1.105 0.895 2 2 2s2-0.895 2-2v-19.172l6.586 6.586c0.39 0.39 0.902 0.586 1.414 0.586s1.024-0.195 1.414-0.586c0.781-0.781 0.781-2.047 0-2.828z"></path>
+		</symbol>
+		<symbol id="icon-cross" viewBox="0 0 32 32">
+		<title>cross</title>
+		<path d="M31.708 25.708c-0-0-0-0-0-0l-9.708-9.708 9.708-9.708c0-0 0-0 0-0 0.105-0.105 0.18-0.227 0.229-0.357 0.133-0.356 0.057-0.771-0.229-1.057l-4.586-4.586c-0.286-0.286-0.702-0.361-1.057-0.229-0.13 0.048-0.252 0.124-0.357 0.228 0 0-0 0-0 0l-9.708 9.708-9.708-9.708c-0-0-0-0-0-0-0.105-0.104-0.227-0.18-0.357-0.228-0.356-0.133-0.771-0.057-1.057 0.229l-4.586 4.586c-0.286 0.286-0.361 0.702-0.229 1.057 0.049 0.13 0.124 0.252 0.229 0.357 0 0 0 0 0 0l9.708 9.708-9.708 9.708c-0 0-0 0-0 0-0.104 0.105-0.18 0.227-0.229 0.357-0.133 0.355-0.057 0.771 0.229 1.057l4.586 4.586c0.286 0.286 0.702 0.361 1.057 0.229 0.13-0.049 0.252-0.124 0.357-0.229 0-0 0-0 0-0l9.708-9.708 9.708 9.708c0 0 0 0 0 0 0.105 0.105 0.227 0.18 0.357 0.229 0.356 0.133 0.771 0.057 1.057-0.229l4.586-4.586c0.286-0.286 0.362-0.702 0.229-1.057-0.049-0.13-0.124-0.252-0.229-0.357z"></path>
+		</symbol>
 		  </defs>
 		  </svg>
 		<header class="header">
@@ -112,11 +124,9 @@
 		        <div class="container">
 		            <div class="office-location__select-block">
 		            <p>Ваш город:</p>
-		                <form class="office-location__select-block-form" method="GET"></form>
+		                <form class="office-location__select-block-form" method="POST"></form>
 		                    <div class="office-location-select">
-		                        <label class="office-location-select-current-option" for="current-option">
-		                            <input value="ст.Ессентукская" id="current-location" type="text" name="current-option">
-		                        </label>
+		                        <p id="current-location" type="text" name="current-option">ст.Ессентукская</p>
 		                        <div class="office-location-select-options">
 		                            <label class="office-location-select-option">
 		                                 ст.Ессентукская1
@@ -170,6 +180,7 @@
 		            </div>
 		            <div class="header__company-tel-number">
 		                <a href="tel:+79283483344">
+		                    <svg class="icon icon-phone"><use xlink:href="#icon-phone"></use></svg>
 		                    +7 (928) 348 33 44
 		                </a>
 		            </div>
@@ -203,12 +214,23 @@
 		                <ul class="main-nav">
 		                    <li class="main-nav__item"><a href="/about-company.html">О компании</a></li>
 		                    <li class="main-nav__item"><a href="/doctors.html">Врачи</a></li>
-		                    <li class="main-nav__item"><a href="/about-services.html">Услуги</a></li>
-		                    <li class="main-nav__item"><a href="#">Расписание</a></li>
-		                    <li class="main-nav__item"><a href="#">Цены</a></li>
-		                    <li class="main-nav__item"><a href="#">Акции</a></li>
-		                    <li class="main-nav__item"><a href="#">Пациентам</a></li>
-		                    <li class="main-nav__item"><a href="#">Отзывы</a></li>
+		                    <li class="main-nav__item"><a href="/services.html">Услуги</a></li>
+		                    <li class="main-nav__item"><a href="/schedule.html">Расписание</a></li>
+		                    <li class="main-nav__item main-nav__item--dropdown"><a href="#">Цены</a>
+		                        <ul class="main-nav__item__dropdown-list">
+		                            <li><a href="/price.html">Прайс лист</a></li>
+		                            <li><a href="#">Программы</a></li>
+		                            <li><a href="#">Диагностика</a></li>    
+		                        </ul>
+		                    </li>
+		                    <li class="main-nav__item"><a href="/actions.html">Акции</a></li>
+		                    <li class="main-nav__item main-nav__item--dropdown">
+		                        <a href="/patient-information.html">Пациентам</a>
+		                        <ul class="main-nav__item__dropdown-list">
+		                            <li><a href="/patient-information.html">Подготовка к иследования</a></li>  
+		                        </ul>
+		                    </li>
+		                    <li class="main-nav__item"><a href="/testimonials.html">Отзывы</a></li>
 		                    <li class="main-nav__item"><a href="/contacts.html">Контакты</a></li>
 		                </ul>
 		            </nav>
@@ -217,213 +239,245 @@
 		</header>
 		<main class="main">
 			<div class="container">
-				<h1 class="page-title">
-					Сеть многопрофильных медицинских центров «Гармония»
-				</h1>
-				<section class="promo-slider">
-				    <ul class="promo-slider__slider-list">
-				        <li class="promo-slider__slider-item">
-				            <div class="promo-slider__slider-item-img-container">
-				                <picture>
-				                    <img class="img-responsive" src="img/index-slider-img1.jpg" srcset="img/index-slider-img1@2x.jpg 2x" alt="">
-				                </picture>
-				                <div class="time-to-end-action">
-				                    <div class="time-to-end-action__text">
-				                        <p>До конца акции осталось</p>
-				                        <p>
-				                            <span>28 дней</span>
-				                            <span>14 часов</span>
-				                            <span>06 минут</span>
-				                        </p>
-				                    </div>
-				                </div>
+				<ul class="breadcrumbs">
+				    <li class="breadcrumbs__item"><a href="#">Главная</a></li>
+				    <li class="breadcrumbs__item"><a href="#">Врачи</a></li>
+				    <li class="breadcrumbs__item"><a href="#">Десятерик Марина Григорьевна</a></li>
+				</ul>
+				<section class="price-list">
+				    <h1 class="page-title">Цены на услуги</h1>
+				    <div class="price-list__wrapper">
+				        <form method="GET">
+				            <div class="doctors__filter-item doctors__filter-search filter__search">
+				                <input type="search" placeholder="Поиск по названию">
+				                <span class="search__icon">
+				                    <svg class="icon icon-search-icon"><use xlink:href="#icon-search-icon"></use></svg>
+				                </span>
 				            </div>
-				        </li>
-				        <li class="promo-slider__slider-item">
-				            <div class="promo-slider__slider-item-img-container">
-				                <picture>
-				                    <img class="img-responsive" src="img/index-slider-img1.jpg" srcset="img/index-slider-img1@2x.jpg 2x" alt="">
-				                </picture>
-				                <div class="time-to-end-action">
-				                    <div class="time-to-end-action__text">
-				                        <p>До конца акции осталось</p>
-				                        <p>
-				                            <span>28 дней</span>
-				                            <span>14 часов</span>
-				                            <span>06 минут</span>
-				                        </p>
-				                    </div>
+				        </form>
+				        <ul class="price-list__main-info patient-information__list">
+				            <li class="patient-information__item open">
+				                <div class="patient-information__item-head">
+				                    <img src="img/logo.png" alt="">
+				                    АЛЛЕРГОЛОГИЯ И ИММУНОЛОГИЯ - ВРАЧЕБНЫЕ ПРИЕМЫ
 				                </div>
-				            </div>
-				        </li>
-				    </ul>
-				</section>
-				<section class="services-list">
-				    <div class="services-list__container">
-				        <ul class="services-list__tabs">
-				            <li id="tab-1" class="services-list__tab active">
-				                <span>Для взрослых</span>
+				                <div class="patient-information__item-price patient-information__item-body">
+				                    <p class="patient-information__item-body-title">ПРИЕМ (ОСМОТР, КОНСУЛЬТАЦИЯ) ВРАЧА-АЛЛЕРГОЛОГА-ИММУНОЛОГА ПЕРВИЧНЫЙ</p>
+				                    <p class="patient-information__item-body-total">2 000 <span>s</span></p>
+				                    <p class="patient-information__item-body-title">ПРИЕМ (ОСМОТР, КОНСУЛЬТАЦИЯ) ВРАЧА-АЛЛЕРГОЛОГА-ИММУНОЛОГА ПЕРВИЧНЫЙ</p>
+				                    <p class="patient-information__item-body-total">2 000 <span>s</span></p>
+				                </div>
 				            </li>
-				            <li id="tab-2" class="services-list__tab">
-				                <span>Для детей</span>
+				            <li class="patient-information__item">
+				                <div class="patient-information__item-head">
+				                    <img src="img/logo.png" alt="">
+				                    АЛЛЕРГОЛОГИЯ И ИММУНОЛОГИЯ - ВРАЧЕБНЫЕ ПРИЕМЫ
+				                </div>
+				                <div class="patient-information__item-price patient-information__item-body">
+				                    <p class="patient-information__item-body-title">ПРИЕМ (ОСМОТР, КОНСУЛЬТАЦИЯ) ВРАЧА-АЛЛЕРГОЛОГА-ИММУНОЛОГА ПЕРВИЧНЫЙ</p>
+				                    <p class="patient-information__item-body-total">2 000 <span>s</span></p>
+				                    <p class="patient-information__item-body-title">ПРИЕМ (ОСМОТР, КОНСУЛЬТАЦИЯ) ВРАЧА-АЛЛЕРГОЛОГА-ИММУНОЛОГА ПЕРВИЧНЫЙ</p>
+				                    <p class="patient-information__item-body-total">2 000 <span>s</span></p>
+				                </div>
 				            </li>
-				            <li id="tab-3" class="services-list__tab">
-				                <span>Проф.осмотры</span>
+				            <li class="patient-information__item">
+				                <div class="patient-information__item-head">
+				                    <img src="img/logo.png" alt="">
+				                    АЛЛЕРГОЛОГИЯ И ИММУНОЛОГИЯ - ВРАЧЕБНЫЕ ПРИЕМЫ
+				                </div>
+				                <div class="patient-information__item-price patient-information__item-body">
+				                    <p class="patient-information__item-body-title">ПРИЕМ (ОСМОТР, КОНСУЛЬТАЦИЯ) ВРАЧА-АЛЛЕРГОЛОГА-ИММУНОЛОГА ПЕРВИЧНЫЙ</p>
+				                    <p class="patient-information__item-body-total">2 000 <span>s</span></p>
+				                    <p class="patient-information__item-body-title">ПРИЕМ (ОСМОТР, КОНСУЛЬТАЦИЯ) ВРАЧА-АЛЛЕРГОЛОГА-ИММУНОЛОГА ПЕРВИЧНЫЙ</p>
+				                    <p class="patient-information__item-body-total">2 000 <span>s</span></p>
+				                </div>
 				            </li>
-				            <li id="tab-4" class="services-list__tab">
-				                <span>Диагностика</span>
+				            <li class="patient-information__item">
+				                <div class="patient-information__item-head">
+				                    <img src="img/logo.png" alt="">
+				                    АЛЛЕРГОЛОГИЯ И ИММУНОЛОГИЯ - ВРАЧЕБНЫЕ ПРИЕМЫ
+				                </div>
+				                <div class="patient-information__item-price patient-information__item-body">
+				                    <p class="patient-information__item-body-title">ПРИЕМ (ОСМОТР, КОНСУЛЬТАЦИЯ) ВРАЧА-АЛЛЕРГОЛОГА-ИММУНОЛОГА ПЕРВИЧНЫЙ</p>
+				                    <p class="patient-information__item-body-total">2 000 <span>s</span></p>
+				                    <p class="patient-information__item-body-title">ПРИЕМ (ОСМОТР, КОНСУЛЬТАЦИЯ) ВРАЧА-АЛЛЕРГОЛОГА-ИММУНОЛОГА ПЕРВИЧНЫЙ</p>
+				                    <p class="patient-information__item-body-total">2 000 <span>s</span></p>
+				                </div>
+				            </li>
+				            <li class="patient-information__item">
+				                <div class="patient-information__item-head">
+				                    <img src="img/logo.png" alt="">
+				                    АЛЛЕРГОЛОГИЯ И ИММУНОЛОГИЯ - ВРАЧЕБНЫЕ ПРИЕМЫ
+				                </div>
+				                <div class="patient-information__item-price patient-information__item-body">
+				                    <p class="patient-information__item-body-title">ПРИЕМ (ОСМОТР, КОНСУЛЬТАЦИЯ) ВРАЧА-АЛЛЕРГОЛОГА-ИММУНОЛОГА ПЕРВИЧНЫЙ</p>
+				                    <p class="patient-information__item-body-total">2 000 <span>s</span></p>
+				                    <p class="patient-information__item-body-title">ПРИЕМ (ОСМОТР, КОНСУЛЬТАЦИЯ) ВРАЧА-АЛЛЕРГОЛОГА-ИММУНОЛОГА ПЕРВИЧНЫЙ</p>
+				                    <p class="patient-information__item-body-total">2 000 <span>s</span></p>
+				                </div>
+				            </li>
+				            <li class="patient-information__item">
+				                <div class="patient-information__item-head">
+				                    <img src="img/logo.png" alt="">
+				                    АЛЛЕРГОЛОГИЯ И ИММУНОЛОГИЯ - ВРАЧЕБНЫЕ ПРИЕМЫ
+				                </div>
+				                <div class="patient-information__item-price patient-information__item-body">
+				                    <p class="patient-information__item-body-title">ПРИЕМ (ОСМОТР, КОНСУЛЬТАЦИЯ) ВРАЧА-АЛЛЕРГОЛОГА-ИММУНОЛОГА ПЕРВИЧНЫЙ</p>
+				                    <p class="patient-information__item-body-total">2 000 <span>s</span></p>
+				                    <p class="patient-information__item-body-title">ПРИЕМ (ОСМОТР, КОНСУЛЬТАЦИЯ) ВРАЧА-АЛЛЕРГОЛОГА-ИММУНОЛОГА ПЕРВИЧНЫЙ</p>
+				                    <p class="patient-information__item-body-total">2 000 <span>s</span></p>
+				                </div>
+				            </li>
+				            <li class="patient-information__item">
+				                <div class="patient-information__item-head">
+				                    <img src="img/logo.png" alt="">
+				                    АЛЛЕРГОЛОГИЯ И ИММУНОЛОГИЯ - ВРАЧЕБНЫЕ ПРИЕМЫ
+				                </div>
+				                <div class="patient-information__item-price patient-information__item-body">
+				                    <p class="patient-information__item-body-title">ПРИЕМ (ОСМОТР, КОНСУЛЬТАЦИЯ) ВРАЧА-АЛЛЕРГОЛОГА-ИММУНОЛОГА ПЕРВИЧНЫЙ</p>
+				                    <p class="patient-information__item-body-total">2 000 <span>s</span></p>
+				                    <p class="patient-information__item-body-title">ПРИЕМ (ОСМОТР, КОНСУЛЬТАЦИЯ) ВРАЧА-АЛЛЕРГОЛОГА-ИММУНОЛОГА ПЕРВИЧНЫЙ</p>
+				                    <p class="patient-information__item-body-total">2 000 <span>s</span></p>
+				                </div>
+				            </li>
+				            <li class="patient-information__item">
+				                <div class="patient-information__item-head">
+				                    <img src="img/logo.png" alt="">
+				                    АЛЛЕРГОЛОГИЯ И ИММУНОЛОГИЯ - ВРАЧЕБНЫЕ ПРИЕМЫ
+				                </div>
+				                <div class="patient-information__item-price patient-information__item-body">
+				                    <p class="patient-information__item-body-title">ПРИЕМ (ОСМОТР, КОНСУЛЬТАЦИЯ) ВРАЧА-АЛЛЕРГОЛОГА-ИММУНОЛОГА ПЕРВИЧНЫЙ</p>
+				                    <p class="patient-information__item-body-total">2 000 <span>s</span></p>
+				                    <p class="patient-information__item-body-title">ПРИЕМ (ОСМОТР, КОНСУЛЬТАЦИЯ) ВРАЧА-АЛЛЕРГОЛОГА-ИММУНОЛОГА ПЕРВИЧНЫЙ</p>
+				                    <p class="patient-information__item-body-total">2 000 <span>s</span></p>
+				                </div>
+				            </li>
+				            <li class="patient-information__item">
+				                <div class="patient-information__item-head">
+				                    <img src="img/logo.png" alt="">
+				                    АЛЛЕРГОЛОГИЯ И ИММУНОЛОГИЯ - ВРАЧЕБНЫЕ ПРИЕМЫ
+				                </div>
+				                <div class="patient-information__item-price patient-information__item-body">
+				                    <p class="patient-information__item-body-title">ПРИЕМ (ОСМОТР, КОНСУЛЬТАЦИЯ) ВРАЧА-АЛЛЕРГОЛОГА-ИММУНОЛОГА ПЕРВИЧНЫЙ</p>
+				                    <p class="patient-information__item-body-total">2 000 <span>s</span></p>
+				                    <p class="patient-information__item-body-title">ПРИЕМ (ОСМОТР, КОНСУЛЬТАЦИЯ) ВРАЧА-АЛЛЕРГОЛОГА-ИММУНОЛОГА ПЕРВИЧНЫЙ</p>
+				                    <p class="patient-information__item-body-total">2 000 <span>s</span></p>
+				                </div>
+				            </li>
+				            <li class="patient-information__item">
+				                <div class="patient-information__item-head">
+				                    <img src="img/logo.png" alt="">
+				                    АЛЛЕРГОЛОГИЯ И ИММУНОЛОГИЯ - ВРАЧЕБНЫЕ ПРИЕМЫ
+				                </div>
+				                <div class="patient-information__item-price patient-information__item-body">
+				                    <p class="patient-information__item-body-title">ПРИЕМ (ОСМОТР, КОНСУЛЬТАЦИЯ) ВРАЧА-АЛЛЕРГОЛОГА-ИММУНОЛОГА ПЕРВИЧНЫЙ</p>
+				                    <p class="patient-information__item-body-total">2 000 <span>s</span></p>
+				                    <p class="patient-information__item-body-title">ПРИЕМ (ОСМОТР, КОНСУЛЬТАЦИЯ) ВРАЧА-АЛЛЕРГОЛОГА-ИММУНОЛОГА ПЕРВИЧНЫЙ</p>
+				                    <p class="patient-information__item-body-total">2 000 <span>s</span></p>
+				                </div>
 				            </li>
 				        </ul>
-				        <div class="services-list__tabs-content">
-				            <ul class="services-list__list active" id='list-1'>
-				                <li class="services-list__list-item"><a href="about-services.html">Терапевт</a></li>
-				                <li class="services-list__list-item"><a href="#">Гинеколог</a></li>
-				                <li class="services-list__list-item"><a href="#">Эндокринолог</a></li>
-				                <li class="services-list__list-item"><a href="#">Дерматолог</a></li>
-				                <li class="services-list__list-item"><a href="#">Дерматовенеролог</a></li>
-				                <li class="services-list__list-item"><a href="#">Гирудотерапевт</a></li>
-				                <li class="services-list__list-item"><a href="#">Гастроэнтеролог</a></li>
-				                <li class="services-list__list-item"><a href="#">Неверолог</a></li>
-				                <li class="services-list__list-item"><a href="#">Массажист</a></li>
-				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
-				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
-				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
-				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
-				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
-				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
-				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
-				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
-				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
-				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
-				            </ul>
-				            <ul class="services-list__list" id='list-2'>
-				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
-				                <li class="services-list__list-item"><a href="#">Гинеколог</a></li>
-				                <li class="services-list__list-item"><a href="#">Эндокринолог</a></li>
-				                <li class="services-list__list-item"><a href="#">Дерматолог</a></li>
-				                <li class="services-list__list-item"><a href="#">Дерматовенеролог</a></li>
-				                <li class="services-list__list-item"><a href="#">Гирудотерапевт</a></li>
-				                <li class="services-list__list-item"><a href="#">Гастроэнтеролог</a></li>
-				                <li class="services-list__list-item"><a href="#">Неверолог</a></li>
-				                <li class="services-list__list-item"><a href="#">Массажист</a></li>
-				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
-				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
-				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
-				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
-				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
-				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
-				            </ul>
-				            <ul class="services-list__list" id='list-3'>
-				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
-				                <li class="services-list__list-item"><a href="#">Гинеколог</a></li>
-				                <li class="services-list__list-item"><a href="#">Эндокринолог</a></li>
-				                <li class="services-list__list-item"><a href="#">Дерматолог</a></li>
-				                <li class="services-list__list-item"><a href="#">Дерматовенеролог</a></li>
-				                <li class="services-list__list-item"><a href="#">Гирудотерапевт</a></li>
-				                <li class="services-list__list-item"><a href="#">Гастроэнтеролог</a></li>
-				                <li class="services-list__list-item"><a href="#">Неверолог</a></li>
-				                <li class="services-list__list-item"><a href="#">Массажист</a></li>
-				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
-				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
-				            </ul>
-				            <ul class="services-list__list" id='list-4'>
-				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
-				                <li class="services-list__list-item"><a href="#">Гинеколог</a></li>
-				                <li class="services-list__list-item"><a href="#">Эндокринолог</a></li>
-				                <li class="services-list__list-item"><a href="#">Дерматолог</a></li>
-				                <li class="services-list__list-item"><a href="#">Дерматовенеролог</a></li>
-				                <li class="services-list__list-item"><a href="#">Гирудотерапевт</a></li>
-				                <li class="services-list__list-item"><a href="#">Гастроэнтеролог</a></li>
-				                <li class="services-list__list-item"><a href="#">Неверолог</a></li>
-				                <li class="services-list__list-item"><a href="#">Массажист</a></li>
-				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
-				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
-				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
-				                <li class="services-list__list-item"><a href="#">Терапевт</a></li>
-				            </ul>
-				            <div class="services-list__aditional">
-				                <p>Дополнительно</p>
-				                <ul class="services-list__aditional-list">
-				                    <li class="services-list__list-item"><a href="#">Вызов врача на дом</a></li>
-				                    <li class="services-list__list-item"><a href="#">Вакуум-градиентная терапия</a></li>
-				                </ul>
-				            </div>
-				        </div>
 				    </div>
 				</section>
-				<section id="registration-doctor-appointment" class="registration-doctor-appointment">
-				    <h2 class="registration-doctor-appointment__title h2">
-				        Запись на приём
-				    </h2>
-				    <form action="" method="POST">
-				        <div class="registration-doctor-appointment__current-city">
-				            <p style="font-weight: 700">Ваш город:</p>
-				            <p class="registration-doctor-appointment__city-name"></p>
-				            <select id="registration-doctor__select-office" name="registration-doctor__select-office">
-				                <option value="ст.Ессентукская">ст.Ессентукская</option>
-				                <option value="ст.Ессентукская2">ст.Ессентукская2</option>
-				                <option value="ст.Ессентукская3">ст.Ессентукская2</option>
-				            </select>
-				        </div>
-				        <div class="registration-doctor-appointment__form-group">
-				            <input type="text" placeholder="Имя" name="name">
-				            <input type="text" name="tel">
-				            <input class="btn primary-btn" type="submit" value="Записаться на приём">
-				        </div>
-				        <p class="registration-doctor-appointment__agree">
-				            Нажимая на кнопку, вы даёте согласие <a href="#">на обработку персональных данных.</a>
-				        </p>
-				        <div class="registration-doctor-appointment__kaptcha">
-				            <div id="html_element"></div>
-				        </div>
-				    </form>
-				</section>
-				<div class="pulsating-circle">
+				<div class="pulsating-circle apointment-popup-show">
 				    <span class="pulsating-circle__text">Запись на приём</span>
 				</div>
+				<div class="scroll-to-top">
+				    <svg class="icon icon-arrow-up2"><use xlink:href="#icon-arrow-up2"></use></svg>
+				</div>
+				<div class="doctor-apointment-popup">
+				    <div class="logo">
+				        <a class="logo__link" href="index.html">
+				            <img class="logo__img" src="img/logo.png" alt="Логотип МЦ Гармония">
+				            <div class="logo__text">
+				                <p class="logo__company-name">
+				                    Гармония
+				                </p>
+				                <p class="logo__company-desck">
+				                    медецинский центр
+				                </p>
+				            </div>
+				        </a>
+				    </div>
+				    <h3 class="doctor-apointment-popup__title">
+				        Оставте свой номер и мы вам перезвоним
+				    </h3>
+				    <form action="" class="doctor-apointment-popup__form" name="doctor-apointment">
+				        <div class="form__group">
+				            <input class="primary-input" type="tel" placeholder="" name="doctor-apointment__tel">
+				        </div>
+				        <div class="form__group doctor-apointment__choise-time">
+				            <label class="doctor-apointment__choise-time-label on">
+				                Сейчас
+				                <input type="radio" name="when-to-call" value="right-now">
+				            </label>
+				            <label class="doctor-apointment__choise-time-label doctor-apointment__choise-time-label--wait-until">
+				                Точное время
+				                <input type="radio" name="when-to-call" value="wait-until">
+				            </label>
+				            <div class="wait-until__select-time">
+				                <div class="wait-until__select-time-hours">
+				                    <button data-hourse="true" class="wait-until__select-arrow wait-until__select-arrow-up"></button>
+				                    <button data-hourse="true" class="wait-until__select-arrow wait-until__select-arrow-down"></button>
+				                </div>
+				                <span class="wait-until__select-time-counter">
+				                    12:00
+				                </span>
+				                <div class="wait-until__select-time-minutes">
+				                    <button data-minutes="true" class="wait-until__select-arrow wait-until__select-arrow-up"></button>
+				                    <button data-minutes="true" class="wait-until__select-arrow wait-until__select-arrow-down"></button>
+				                </div>
+				            </div>
+				        </div>
+				        <div class="form__group">
+				            <a href="#" class="btn primary-btn">
+				                <svg class="icon icon-phone"><use xlink:href="#icon-phone"></use></svg>
+				                Жду звонка
+				            </a>
+				        </div>
+				    </form>
+				    <button class="close-btn">
+				        <svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg>
+				    </button>
+				</div>
+				<div class="overlay"></div>
 			</div>
 		</main>
 		<footer class="footer">
-		    <div class="container">
-		        <div class="footer__top">
+		    <div class="footer__top">
+		        <div class="container">
 		            <p class="footer__text">У вас есть вопросы?</p>
 		            <p class="footer__text">Просто позвоните нам</p>
 		            <a class="footer__company-number" href="tel:+79283483344">+7 (928) 348 33 44</a>
 		        </div>
-		        <div class="footer__bot">
-		            <ul class="social-list">
-		                <li class="social-list__item">
-		                    <a href="#">
-		                        <svg class="icon icon-vk"><use xlink:href="#icon-vk"></use></svg>
-		                    </a>
-		                </li>
-		                <li class="social-list__item">
-		                    <a href="#">
-		                        <svg class="icon "><use xlink:href="#icon-facebook2"></use></svg>
-		                    </a>
-		                </li>
-		                <li class="social-list__item">
-		                    <a href="#">
-		                        <svg class="icon"><use xlink:href="#icon-youtube"></use></svg>
-		                    </a>
-		                </li>
-		                <li class="social-list__item">
-		                    <a href="#">
-		                        <svg class="icon icon-ok"><use xlink:href="#icon-ok"></use></svg>
-		                    </a>
-		                </li>
-		            </ul>
-		        </div>
+		    </div>
+		    <div class="footer__bot container">
+		        <p style="font-weight: 600;color: #2a2a28;margin: 0;margin-right: 20px;display: inline-block; margin-top: 10px;">Мы в соц.сетях: </p>
+		        <ul class="social-list">
+		            <li class="social-list__item">
+		                <a href="#">
+		                    <svg class="icon icon-vk"><use xlink:href="#icon-vk"></use></svg>
+		                </a>
+		            </li>
+		            <li class="social-list__item">
+		                <a href="#">
+		                    <svg class="icon icon-fb "><use xlink:href="#icon-facebook2"></use></svg>
+		                </a>
+		            </li>
+		            <!-- <li class="social-list__item">
+		                <a href="#">
+		                    <svg class="icon icon-yt"><use xlink:href="#icon-youtube"></use></svg>
+		                </a>
+		            </li> -->
+		            <li class="social-list__item">
+		                <a href="#">
+		                    <svg class="icon icon-ok"><use xlink:href="#icon-ok"></use></svg>
+		                </a>
+		            </li>
+		        </ul>
 		    </div>
 		</footer>
-		<script src="./js/main.js" defer></script>
+		<script src="./js/main.min.js" defer></script>
 		<script src="./js/svgxuse.js" defer></script>
-		<script type="text/javascript">
-			var onloadCallback = function() {
-			  grecaptcha.render('html_element', {
-				'sitekey' : '6LcApqAUAAAAAGhd3e4VAAI58MLIVAjKPJmnDMti'
-			  });
-			};
-		</script>
 	</body>
 </html>
