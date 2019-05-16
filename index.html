@@ -126,7 +126,7 @@
 		            <p>Ваш город:</p>
 		                <form class="office-location__select-block-form" method="POST"></form>
 		                    <div class="office-location-select">
-		                        <p id="current-location" type="text" name="current-option">ст.Ессентукская</p>
+		                        <p class="current-location" type="text" name="current-option">ст.Ессентукская</p>
 		                        <div class="office-location-select-options">
 		                            <label class="office-location-select-option">
 		                                 ст.Ессентукская1
@@ -219,8 +219,6 @@
 		                    <li class="main-nav__item main-nav__item--dropdown"><a href="#">Цены</a>
 		                        <ul class="main-nav__item__dropdown-list">
 		                            <li><a href="/price.html">Прайс лист</a></li>
-		                            <li><a href="#">Программы</a></li>
-		                            <li><a href="#">Диагностика</a></li>    
 		                        </ul>
 		                    </li>
 		                    <li class="main-nav__item"><a href="/actions.html">Акции</a></li>
@@ -385,7 +383,7 @@
 				        </div>
 				        <div class="registration-doctor-appointment__form-group">
 				            <input type="text" placeholder="Имя" name="name">
-				            <input type="text" name="tel">
+				            <input type="text" id="tel-number" placeholder="8(___) ___-____" name="tel">
 				            <input class="btn primary-btn" type="submit" value="Записаться на приём">
 				        </div>
 				        <p class="registration-doctor-appointment__agree">
@@ -421,7 +419,7 @@
 				    </h3>
 				    <form action="" class="doctor-apointment-popup__form" name="doctor-apointment">
 				        <div class="form__group">
-				            <input class="primary-input" type="tel" placeholder="" name="doctor-apointment__tel">
+				            <input class="primary-input" id="tel-number-popup" type="tel" placeholder="8(___) ___-____" name="doctor-apointment__tel">
 				        </div>
 				        <div class="form__group doctor-apointment__choise-time">
 				            <label class="doctor-apointment__choise-time-label on">
@@ -440,6 +438,7 @@
 				                <span class="wait-until__select-time-counter">
 				                    12:00
 				                </span>
+				                <input class="wait-until__select-time-keyboard-input" type="text">
 				                <div class="wait-until__select-time-minutes">
 				                    <button data-minutes="true" class="wait-until__select-arrow wait-until__select-arrow-up"></button>
 				                    <button data-minutes="true" class="wait-until__select-arrow wait-until__select-arrow-down"></button>
