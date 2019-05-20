@@ -615,6 +615,12 @@ template {
   font-weight: normal;
   font-style: normal; }
 
+@font-face {
+  font-family: 'Garamond';
+  src: url("../fonts/garamond-bold.ttf") format("ttf");
+  font-weight: bold;
+  font-style: normal; }
+
 .rouble {
   font-family: 'rouble';
   text-transform: initial; }
@@ -881,8 +887,8 @@ html {
   text-decoration: none; }
 
 .logo__company-name {
-  font-family: 'Arvo';
-  font-weight: 700;
+  font-family: 'Garamond';
+  font-weight: bold;
   font-size: 2.5rem;
   color: #66ac4c;
   margin: 0;
@@ -891,7 +897,8 @@ html {
 
 .logo__text {
   padding-left: .5em;
-  white-space: nowrap; }
+  white-space: nowrap;
+  font-family: 'Garamond', sans-serif; }
 
 .logo__company-desck {
   color: #7b7b7b;
@@ -1261,7 +1268,9 @@ html {
 .services-list__tabs-content {
   display: flex;
   padding-top: 57px;
-  padding-bottom: 50px; }
+  padding-bottom: 50px;
+  padding-left: 15px;
+  padding-right: 15px; }
 
 .services-list__list-item {
   width: 50%;
@@ -1271,7 +1280,7 @@ html {
     font-size: 1em;
     font-weight: 400;
     text-decoration: none;
-    transition: all .3s ease-in; }
+    transition: all .1s ease-in; }
     .services-list__list-item a:hover {
       color: #68ab4c; }
 
@@ -1310,8 +1319,8 @@ html {
     width: 100%;
     margin-left: 15px;
     margin-right: 15px;
-    padding-top: 18px;
-    padding-bottom: 20px;
+    padding-top: 16px;
+    padding-bottom: 18px;
     padding-left: 10px;
     border-radius: 6px;
     margin-bottom: 15px; }
@@ -1326,7 +1335,7 @@ html {
   font-weight: 600;
   margin: 0;
   margin-bottom: 15px;
-  margin-top: 10px; }
+  font-size: 12px; }
   .registration-doctor-appointment__agree a {
     color: #66ac4a; }
 
@@ -1421,6 +1430,24 @@ html {
   color: #68ab4c;
   font-weight: 600;
   text-decoration: none; }
+
+.addresses-and-schedules {
+  position: relative; }
+
+.addresses-and-schedules_link-popup {
+  position: absolute;
+  display: none;
+  background: #f7f7f7;
+  padding: 15px;
+  z-index: 300;
+  width: 360px; }
+  .addresses-and-schedules_link-popup .title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 25px; }
+    .addresses-and-schedules_link-popup .title .btn {
+      min-width: 160px; }
 
 .menu-toggle {
   overflow: hidden;
@@ -2239,6 +2266,33 @@ select {
     opacity: 0;
     position: absolute; }
 
+.wait-until__select-time-keyboard-input {
+  opacity: 1 !important;
+  position: relative !important;
+  padding-left: 0;
+  border: none;
+  max-width: 45px;
+  font-size: 16px; }
+
+.submit-label {
+  color: #fff;
+  position: relative;
+  max-width: 290px;
+  width: 290px;
+  height: 46px;
+  box-sizing: border-box; }
+  .submit-label input {
+    margin-right: 0; }
+  .submit-label svg {
+    position: absolute;
+    top: -35px;
+    left: 70px; }
+  .submit-label span {
+    position: absolute;
+    top: -30px;
+    white-space: nowrap;
+    left: 100px; }
+
 .wait-until__select-time {
   border: 1px solid #2a2a28;
   max-width: 140px;
@@ -2395,12 +2449,16 @@ select {
     margin-left: 0; }
 
 .patient-information__item-price .patient-information__item-body-title {
-  font-size: 16px; }
+  font-size: 16px;
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%; }
 
 .patient-information__item-body-total {
   font-weight: 700;
   white-space: nowrap;
-  float: right; }
+  float: right;
+  padding-left: 10px; }
 
 @media screen and (min-width: 576px) {
     .container {
@@ -2417,6 +2475,15 @@ select {
 @media screen and (min-width: 1200px) {
     .container {
       max-width: 1110px; } }
+
+@media (max-width: 1024px) {
+  .actions__wrapper {
+    margin-left: 0;
+    margin-right: 0; }
+    .actions__wrapper .actions__item {
+      max-width: 100%;
+      margin-left: 0;
+      margin-right: 0; } }
 
 @media (max-width: 992px) {
   .header__company-tel-number {
@@ -2540,9 +2607,14 @@ select {
     text-align: left; }
   .search {
     display: none; }
-  .time-to-end-action__text p {
-    font-size: .875em;
-    margin-bottom: 0; }
+  .time-to-end-action__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .time-to-end-action__text p {
+      font-size: 12px;
+      margin-bottom: 0;
+      margin-right: 0 !important; }
   .services-list__list-item {
     font-size: 0.875em; }
   .services-list__tab {
@@ -2613,6 +2685,8 @@ select {
     margin-bottom: 15px; }
   .doctors__list {
     margin-top: 25px; }
+  .services__wrapper {
+    justify-content: center; }
   .services__category-name {
     text-align: center; }
   .services__category-list {
@@ -2647,7 +2721,6 @@ select {
   .patient-information__item-body-title {
     font-size: 0.825em; }
   .patient-information__item-price .patient-information__item-body-total {
-    padding-left: 10px;
     float: none; } }
 
 @media (max-width: 460px) {

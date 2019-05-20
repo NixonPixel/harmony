@@ -149,6 +149,23 @@
 		                    Адреса и графики работы
 		                </a>
 		            </p>
+		            <div class="addresses-and-schedules_link-popup">
+		            <button class="close-btn">
+		                    <svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg>
+		            </button>
+		            <p class="title">
+		                Адреса и графики работы
+		                <a class="btn primary-btn" href="/contacts.html">Cхема проезда</a>
+		            </p>
+		            <div class="addresses-and-schedules_link-popup-wrapper">
+		                
+		                <p class="addresses-and-schedules_link-popup-adress">ул. Павлова, 14а корпус 1</p>
+		                <span style="display:none;" id="rabochiy_den">1</span>
+		                <p>Пн-Пт: 06:30–18:00</p>
+		                <p> Cб: 06:30–16:00 </p>
+		                <p> Вс: Выходной</p>
+		            </div>
+		            </div>
 		        </div>
 		        </div>
 		    </div>
@@ -297,7 +314,7 @@
 					    <h2 class="registration-doctor-appointment__title h2">
 					        Запись на приём
 					    </h2>
-					    <form action="" method="POST">
+					    <form id="registration-doctor-appointment-form" action="" method="POST">
 					        <div class="registration-doctor-appointment__current-city">
 					            <p style="font-weight: 700">Ваш город:</p>
 					            <p class="registration-doctor-appointment__city-name"></p>
@@ -312,6 +329,7 @@
 					            <input type="text" id="tel-number" placeholder="8(___) ___-____" name="tel">
 					            <input class="btn primary-btn" type="submit" value="Записаться на приём">
 					        </div>
+					        
 					        <p class="registration-doctor-appointment__agree">
 					            Нажимая на кнопку, вы даёте согласие <a href="#">на обработку персональных данных.</a>
 					        </p>
@@ -361,21 +379,18 @@
 					                    <button data-hourse="true" class="wait-until__select-arrow wait-until__select-arrow-up"></button>
 					                    <button data-hourse="true" class="wait-until__select-arrow wait-until__select-arrow-down"></button>
 					                </div>
-					                <span class="wait-until__select-time-counter">
-					                    12:00
-					                </span>
-					                <input class="wait-until__select-time-keyboard-input" type="text">
+					                <input id="wait-until-keyboard-input" class="wait-until__select-time-keyboard-input" type="tel">
 					                <div class="wait-until__select-time-minutes">
 					                    <button data-minutes="true" class="wait-until__select-arrow wait-until__select-arrow-up"></button>
 					                    <button data-minutes="true" class="wait-until__select-arrow wait-until__select-arrow-down"></button>
 					                </div>
 					            </div>
 					        </div>
-					        <div class="form__group">
-					            <a href="#" class="btn primary-btn">
+					        <div class="form__group form__group-submit">
+					            <label class="submit-label">
+					                <input type="submit" value="Жду звонка" href="#" class="btn primary-btn">
 					                <svg class="icon icon-phone"><use xlink:href="#icon-phone"></use></svg>
-					                Жду звонка
-					            </a>
+					            </label>
 					        </div>
 					    </form>
 					    <button class="close-btn">
