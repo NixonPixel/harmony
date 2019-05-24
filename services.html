@@ -491,7 +491,7 @@
 					    <h2 class="registration-doctor-appointment__title h2">
 					        Запись на приём
 					    </h2>
-					    <form id="registration-doctor-appointment-form" action="" method="POST">
+					    <form id="registration-doctor-appointment-form">
 					        <div class="registration-doctor-appointment__current-city">
 					            <p style="font-weight: 700">Ваш город:</p>
 					            <p class="registration-doctor-appointment__city-name"></p>
@@ -502,8 +502,8 @@
 					            </select>
 					        </div>
 					        <div class="registration-doctor-appointment__form-group">
-					            <input type="text" placeholder="Имя" name="name">
-					            <input type="text" id="tel-number" placeholder="8(___) ___-____" name="tel">
+					            <input type="text" id="registration-name" required placeholder="Имя" name="name">
+					            <input type="text" id="tel-number" required placeholder="8(___) ___-____" name="tel">
 					            <input class="btn primary-btn" type="submit" value="Записаться на приём">
 					        </div>
 					        
@@ -514,6 +514,12 @@
 					            <div id="html_element"></div>
 					        </div>
 					    </form>
+					    <div class="dispatch-notification">
+					            <button class="close-btn">
+					                    <svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg>
+					            </button>
+					        <h2>Спасибо за обращение, Ваша заявка принята.<br> В ближайшее время мы с вами свяжемся!</h2>
+					    </div>
 					</section>
 					<div class="pulsating-circle apointment-popup-show">
 					    <span class="pulsating-circle__text">Запись на приём</span>
@@ -538,7 +544,7 @@
 					    <h3 class="doctor-apointment-popup__title">
 					        Оставте свой номер и мы вам перезвоним
 					    </h3>
-					    <form action="" class="doctor-apointment-popup__form" name="doctor-apointment">
+					    <form class="doctor-apointment-popup__form" name="doctor-apointment">
 					        <div class="form__group tel-input">
 					            <input class="primary-input error" id="tel-number-popup" type="tel" placeholder="8(___) ___-____" name="doctor-apointment__tel">
 					        </div>
